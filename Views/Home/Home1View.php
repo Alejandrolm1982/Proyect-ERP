@@ -14,7 +14,7 @@
         </button>
     </article>
     <article>
-        <a href="./Facturacion.php">Facturacion</a>
+        <a href="./clienteproveedor.php">ClienteProveedor</a>
     </article>
     <article>
         <button type="button">

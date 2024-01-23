@@ -8,7 +8,6 @@
     <script src="Assets/js/motor.js"></script>
 </head>
 <body>
-    <?php require_once "Views/Shared/Menu1View.php"; ?>
     <?php require_once "Views/ClienteProveedor/ClienteProveedor1View.php"; ?>
 </body>
 </html>
