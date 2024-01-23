@@ -1,0 +1,4 @@
+ClienteProveedor1Controller hace la consulta y filtra las consultas
+ClienteProveedor2Controller es el que controla el cambio de interfaz a la de añadir para añadir nuevos registros
+ClienteProveedor3Controller es el que controla el cambio de interfaz a la de actualizar los registros
+ClienteProveedor4Controller es el que controla el borrado de registros
