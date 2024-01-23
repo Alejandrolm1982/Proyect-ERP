@@ -8,14 +8,14 @@
 </head>
 <body>
     <label>Selecciona Cliente/Proveedor:</label>
-    <select id="cliente/proveedor" name="cliente/proveedor">
+    <select id="cliente/proveedor" name="cliente/proveedor" class="select">
         <option value="todos">Todos</option>
         <option value="cliente">Cliente</option>
         <option value="proveedor">Proveedor</option>
     </select>
-    <button id="aniadir">Añadir</button>
-    <button id="editar">Editar</button>
-    <button id="eliminar">Eliminar</button>
+    <button id="aniadir" class="boton ">Añadir</button>
+    <button id="editar" class="boton">Editar</button>
+    <button id="eliminar" class="boton">Eliminar</button>
     <div id="container1"><!--AQUI TIENE QUE METERSE LA PRIMERA CONSULTA DE LA TABLA FACTURACION-->
 
     </div>

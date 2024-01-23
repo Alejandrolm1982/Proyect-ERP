@@ -177,4 +177,124 @@ input[type="file"]{
     background: #ffffff;
     color: #000000;
 }
+
+
+
+
+
+/* Estilos para los botones redondos con efecto */
+.boton {
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background: linear-gradient(to right, #007bff, #0056b3); /* Gradiente azul vibrante */
+    color: #040b19; /* Texto blanco */
+    border: none;
+    cursor: pointer;
+    margin-top: 10px; /* Espacio entre los botones y otros elementos */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombreado suave */
+  }
+  
+  /* Cambio de color y efecto al pasar el ratón sobre los botones */
+  .boton:hover {
+    background: linear-gradient(to right, #0056b3, #007bff); /* Cambia el gradiente al pasar el ratón */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el ratón */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombreado más pronunciado al pasar el ratón */
+    background: linear-gradient(to right, #171e30, #2184ef); /* Gradiente azul vibrante */    
+  }
+
+/* Estilos para el selector redondo con efecto */
+.select {
+    border-radius: 10px;
+    padding: 8px;
+    font-size: 16px;
+    background: linear-gradient(to right, #007bff, #0056b3); /* Gradiente azul vibrante */
+    color: #040b19; /* Texto blanco */
+    margin-bottom: 10px; /* Espacio entre el selector y otros elementos */
+    margin-top: 20px; /* Espacio superior para separar del borde superior */
+  }
+  
+  /* Cambio de color y efecto al pasar el ratón sobre el selector */
+  .select:hover {
+    background: linear-gradient(to right, #0056b3, #007bff); /* Cambia el gradiente al pasar el ratón */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el ratón */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombreado más pronunciado al pasar el ratón */
+  }
+  
+  /* Estilos para el desplegable del selector en Chrome y Edge */
+  .select::-webkit-select-placeholder {
+    color: #040b19; /* Texto blanco */
+  }
+  
+  .select:-ms-expand {
+    background-color: #007bff; /* Color azul al abrir en Edge */
+  }
+  
+  /* Estilos para el desplegable del selector en Firefox */
+  .select {
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+  }
+  
+  /* Estilos para el desplegable del selector en Firefox y Safari */
+  .select option {
+    background-color: #007bff; /* Color azul al abrir en Firefox y Safari */
+    color: #040b19; /* Texto blanco */
+  }
+/* Estilos para el cuerpo de la página */
+body {
+    background-color: #a6d4fa; /* Celeste claro para el fondo del cuerpo */
+    font-family: Arial, sans-serif;
+    text-align: center; /* Centra el texto horizontalmente */
+    margin: 0;
+    color: #040b19; /* Azul oscuro para el texto */
+  }
+  
+  /* Contenedor para centrar verticalmente */
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  /* Estilos para el selector redondo con efecto */
+  .select {
+    border-radius: 10px;
+    padding: 8px;
+    font-size: 16px;
+    background: linear-gradient(to right, #007bff, #0056b3); /* Gradiente azul vibrante */
+    color: #040b19; /* Texto blanco */
+    margin-bottom: 10px; /* Espacio entre el selector y otros elementos */
+    margin-top: 20px; /* Espacio superior para separar del borde superior */
+  }
+  
+  /* Cambio de color y efecto al pasar el ratón sobre el selector */
+  .select:hover {
+    background: linear-gradient(to right, #0056b3, #007bff); /* Cambia el gradiente al pasar el ratón */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el ratón */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombreado más pronunciado al pasar el ratón */
+  }
+  
+  /* Estilos para los botones redondos con efecto */
+  .boton {
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background: linear-gradient(to right, #007bff, #0056b3); /* Gradiente azul vibrante */
+    color: #040b19; /* Texto blanco */
+    border: none;
+    cursor: pointer;
+    margin-top: 10px; /* Espacio entre los botones y otros elementos */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombreado suave */
+  }
+  
+  /* Cambio de color y efecto al pasar el ratón sobre los botones */
+  .boton:hover {
+    background: linear-gradient(to right, #0056b3, #007bff); /* Cambia el gradiente al pasar el ratón */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el ratón */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombreado más pronunciado al pasar el ratón */
+  }
 /* FIN - Controles */
