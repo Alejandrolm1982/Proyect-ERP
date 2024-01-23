@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="Assets/css/styleLogin.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
-    <script src="Assets/js/motorLogin.js"></script>
+    <script src="Assets/js/motor.js"></script>
 </head>
 <body>
 
