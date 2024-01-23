@@ -8,6 +8,6 @@
     <script src="Assets/js/motor.js"></script>
 </head>
 <body>
-    <?php require_once "Views/Index/Index1View.php"; ?>
+    <?php require_once "Views/Login/Login1View.php"; ?>
 </body>
 </html>

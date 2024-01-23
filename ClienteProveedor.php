@@ -9,7 +9,6 @@
 </head>
 <body>
     <?php require_once "Views/Shared/Menu1View.php"; ?>
-    <?php require_once "Views/Index/Index1View.php"; ?>
-    <?php require_once "Views/Shared/Footer1View.php"; ?>
+    <?php require_once "Views/ClienteProveedor/ClienteProveedor1View.php"; ?>
 </body>
 </html>

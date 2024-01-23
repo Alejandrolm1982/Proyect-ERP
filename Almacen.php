@@ -9,6 +9,6 @@
 </head>
 <body>
     <?php require_once "Views/Shared/Menu1View.php"; ?>
-    <?php require_once "Views/Index/Index1View.php"; ?>
+    <?php require_once "Views/Almacen/Almacen1View.php"; ?>
 </body>
 </html>
