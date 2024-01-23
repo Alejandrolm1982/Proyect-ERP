@@ -8,7 +8,6 @@
     <script src="Assets/js/motor.js"></script>
 </head>
 <body>
-
 <div class="main">
     <div class="container a-container" id="a-container">
         <form id="a-form" class="form" method="POST/GET" action="/your-registration-endpoint">
@@ -21,6 +20,7 @@
             <input class="form__input" type="password" placeholder="Password" name="password">
             <button type="submit" class="form__button button submit">LOG IN</button>
         </form>
+        <a href="/site1/Git/Proyect-ERP/Home.php">Home</a>
     </div>
 
     <div class="container b-container" id="b-container">

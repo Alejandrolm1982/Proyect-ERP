@@ -14,9 +14,7 @@
         </button>
     </article>
     <article>
-        <button type="button">
-            Facturacion
-        </button>
+        <a href="/site1/Git/Proyect-ERP/Facturacion.php">Facturacion</a>
     </article>
     <article>
         <button type="button">
