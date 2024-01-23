@@ -20,7 +20,7 @@
             <input class="form__input" type="password" placeholder="Password" name="password">
             <button type="submit" class="form__button button submit">LOG IN</button>
         </form>
-        <a href="/site1/Git/Proyect-ERP/Home.php">Home</a>
+        <a href="./home.php">Home</a>
     </div>
 
     <div class="container b-container" id="b-container">
