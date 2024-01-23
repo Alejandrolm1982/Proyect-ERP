@@ -13,14 +13,11 @@ function habilitarControl1(control1)
 }
 
 /* INICIO - ajaxPost1 - Devuelve el resultado a un DIV (POST) */
-function ajaxPost1(form1, controlador1, div1)
+function ajaxPost1(controlador1, div1)
 {
 
   // 1.- Creación del objeto XMLHttpRequest (Ajax1)
   const Ajax1 = new XMLHttpRequest();
-
-  // 2.- Enlace del formulario a un objeto FormData (FormData1)
-  const FormData1 = new FormData( form1 );
   
   // 5.-Éxito en el envío
   Ajax1.addEventListener("load", function(event) {
@@ -31,13 +28,10 @@ function ajaxPost1(form1, controlador1, div1)
   Ajax1.addEventListener("error", function( event ) {
     alert( 'Error: no se ha enviado la informacion' );
   } );
-  
-  // 3.-Configuración del envío del formulario a través del FormData
   Ajax1.open("POST", controlador1);
   
   // 4.-Envío del formulario a través del FormData
-  Ajax1.send( FormData1 );
-  
+  Ajax1.send();
 }
 /* FIN - ajaxPost1 - Devuelve el resultado a un DIV (POST) */
 
@@ -86,12 +80,9 @@ function ajaxGet1(controlador1, div1) {
 }
 /* FIN - ajaxGet1 - Devuelve el resultado a un DIV (GET) */
 
-function seleccionarDatos1(form1, boton1, controlador1, div1)
+function seleccionarDatos1(controlador1, div1)
 {    
-    deshabilitarControl1(boton1);
-    ajaxPost1(form1,controlador1,div1);
-    habilitarControl1(boton1);
-    form1.reset();
+    ajaxPost1(controlador1,div1);
 }
 
 function seleccionarDatos2(form1, boton1, controlador1, div1)
@@ -131,38 +122,27 @@ window.addEventListener('load', function(){
   let div1;
   let div2;
 
-  /* INICIO  - Enter tras escribir en el campo buscar */
-  /*
-  const botonConsulta1 = document.getElementById('botonConsulta1');
-  if(botonConsulta1)
-  {
-    botonConsulta1.addEventListener('keydown', (e) => {
-      if(e.key === 'Enter')
-      {
-        buscar1(botonConsulta1);
-      }
-    });     
-  }
-  */
-  /* FIN  - Enter tras escribir en el campo buscar */
+
+
 
   /* ---------------------------------- INICIO - (submit) Seleccionar 1 */
   // Paso 1: Obtener referencias:
-  const formConsulta1 = document.getElementById("formConsulta1");
+  const selectClienteProveedor = document.getElementById("cliente/proveedor");
   // Paso 2 - Asociación del elemento al evento (submit) y llamada a la función
-  if(formConsulta1)
+  if(selectClienteProveedor.value == "todos")
   {
     // Referencia de los elementos
-    boton1 = document.getElementById("botonConsulta1");
-    controlador1 = "Controllers/Consulta1Controller.php";
-    div1 = document.getElementById("contenedor2");
-    // Evento y llamada a la función
-    formConsulta1.addEventListener("submit", function(event){
-      event.preventDefault();
-      seleccionarDatos1(formConsulta1,boton1,controlador1,div1);
-    });
+    controlador1 = "Controllers/ClienteProveedor1Controller.php";
+    div1 = document.getElementById("container1");
+    seleccionarDatos1(controlador1,div1);
   }
   /* ---------------------------------- FIN - (submit) Seleccionar 1 */
+
+
+
+
+
+  
 
   /* ---------------------------------- INICIO - (click) Seleccionar 2 */
   // Paso 1 - Referencia del elemento que tiene asociado el evento
@@ -254,6 +234,7 @@ window.addEventListener('load', function(){
   /* ---------------------------------- FIN - (submit) Insertar y subir archivos 1  */
 
 });
+
 //Login JS
 let switchCtn = document.querySelector("#switch-cnt");
 let switchC1 = document.querySelector("#switch-c1");
