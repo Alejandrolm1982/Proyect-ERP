@@ -6,9 +6,9 @@ class Connection
         // Xampp
         // $mysqli = new mysqli('localhost', 'root', '', 'bd1');
         // Mampp
-        // $mysqli = new mysqli('localhost', 'root', 'root', 'bd1');
+        // $mysqli = new mysqli('localhost', 'adminERP', 'AlejandroIvanERP', 'proyecto_erp');
 
-        $mysqli = new mysqli('localhost', 'root', '', 'bd1');
+        $mysqli = new mysqli('localhost', 'adminERP', 'AlejandroIvanERP', 'proyecto_erp');
 
         if($mysqli->connect_errno)
         {
