@@ -63,8 +63,6 @@ if (selectClienteProveedor) {
 
 });
 
-
-
 //Login JS
 let switchCtn = document.querySelector("#switch-cnt");
 let switchC1 = document.querySelector("#switch-c1");
