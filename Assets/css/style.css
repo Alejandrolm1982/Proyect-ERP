@@ -332,3 +332,70 @@ body {
 .vertical-nav a:hover {
   background-color: #b6cee9; /* Cambia esto al color que desees para el hover */
 }
+
+/*ESTILOS FORMULARIO AÑADIR*/
+
+#formularioAgregar {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+#formularioAgregar label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#formularioAgregar input,
+#formularioAgregar select {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+#formularioAgregar button {
+  grid-column: span 1; /* Ocupa solo una columna */
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+        /* Estilos para los campos del formulario */
+        .formulario-campo {
+          width: 100%;
+          padding: 8px;
+          box-sizing: border-box;
+          border-radius: 10px;
+          font-size: 16px;
+          background: linear-gradient(to right, #007bff, #0056b3);
+          color: #040b19;
+          border: none;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          margin-bottom: 10px;
+      }
+
+      /* Estilos adicionales para el campo de fecha si es necesario */
+      .formulario-campo[type="date"] {
+          /* Personaliza según sea necesario */
+      }
+
+      /* Estilos para el botón del formulario */
+      .formulario-boton {
+          grid-column: span 1;
+          padding: 10px 20px;
+          border-radius: 20px;
+          font-size: 16px;
+          background: linear-gradient(to right, #007bff, #0056b3);
+          color: #040b19;
+          border: none;
+          cursor: pointer;
+          margin-top: 10px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Cambio de color y efecto al pasar el ratón sobre el botón del formulario */
+      .formulario-boton:hover {
+          background: linear-gradient(to right, #0056b3, #007bff);
+          transform: scale(1.05);
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
