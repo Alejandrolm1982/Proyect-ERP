@@ -6,6 +6,17 @@
     <title>Cliente/Proveedor</title>
 </head>
 <body>
+
+    <nav class="vertical-nav">
+        <ul>
+            <li><a href="./Usuario.php">Usuario</a></li>
+            <li><a href="./Home.php">Inicio</a></li>
+            <li><a href="./Almacen.php">Almacen</a></li>
+            <li><a href="./Facturacion.php">Facturacion</a></li>
+            <li><a href="./Producto.php">Producto</a></li>
+        </ul>
+    </nav>
+
     <label>Selecciona Cliente/Proveedor:</label>
     <select id="cliente/proveedor" name="cliente/proveedor" class="select">
         <option ></option>

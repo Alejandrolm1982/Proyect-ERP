@@ -4,33 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="Assets/css/style.css">
+    <link rel="stylesheet" href="Assets/css/styleHome.css">
     <script src="Assets/js/motor.js"></script>
 </head>
 <body>
-    <article>
+    <section>
+    <a href="./Usuario.php">
         <button type="button">
-            Usuario
+            <img src="Assets/img/mondongo1.jpg" alt="Mondongo Image">
         </button>
-    </article>
-    <article>
-        <a href="./clienteproveedor.php">ClienteProveedor</a>
-    </article>
-    <article>
-        <button type="button">
-            Cliente y Proveedores
-        </button>
-    </article>
+    </a>
+    <h4>Bienvenido, "Usuario"</h4>
+    </section>
     <article>
         <button type="button">
-            Productos
+        <a href="./Clienteproveedor.php">ClienteProveedor</a>
         </button>
     </article>
     <article>
         <button type="button">
-            Almacen
+        <a href="./Almacen.php">Almacen</a>
         </button>
-    </article>
-    
+    </article>  
+    <article>
+        <button type="button">
+        <a href="./Facturacion.php">Facturacion</a>
+        </button>
+    </article> 
+    <article>
+        <button type="button">
+        <a href="./Producto.php">Producto</a>
+        </button>
+    </article> 
 </body>
 </html>
