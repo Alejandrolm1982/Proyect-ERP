@@ -25,8 +25,6 @@
         <option value="proveedor">Proveedor</option>
     </select>
     <button id="aniadir" class="boton" onclick="toggleFormulario()">Añadir</button>
-    <button id="editar" class="boton">Editar</button>
-    <button id="eliminar" class="boton">Eliminar</button>
     <div id="container2" style="display: none;">
         <!-- FORMULARIO DE AÑADIR -->
         <form id="formularioAgregar" class="formulario">

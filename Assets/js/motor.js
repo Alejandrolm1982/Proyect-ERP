@@ -99,6 +99,12 @@ window.addEventListener('load', function(){
   let controlador2;
   let div2;
   let boton1;
+  let controlador3;
+  let boton2;
+  let div3;
+  let controlador4;
+  let boton3;
+  let div4;
 
 /* ---------------------------------- INICIO - (submit) Seleccionar 1 */
 // Paso 1: Obtener referencias:
@@ -121,7 +127,7 @@ if (selectClienteProveedor) {
 }
 /* ---------------------------------- FIN - (submit) Seleccionar 1 */
 
-  /* ---------------------------------- INICIO - (submit) Insertar 3 */
+  /* ---------------------------------- INICIO - (submit) Insertar 1 */
   // Paso 1: Obtener referencias:
   const formInsercion1 = document.getElementById("formularioAgregar");
   // Paso 2 - Asociación del elemento al evento (submit) y llamada a la función
@@ -137,9 +143,43 @@ if (selectClienteProveedor) {
       insertarDatos1(formInsercion1,boton1,controlador2,div2);
     });
   }
-  /* ---------------------------------- FIN - (submit) Insertar 3 */
+  /* ---------------------------------- FIN - (submit) Insertar 1 */
 
+  /* ---------------------------------- INICIO - (submit) edicion 1 */
+  // Paso 1: Obtener referencias:
+  const formEdicion1 = document.getElementById("formularioEdicion");
+  // Paso 2 - Asociación del elemento al evento (submit) y llamada a la función
+  if(formEdicion1)
+  {
+    // Referencia de los elementos
+    boton2 = document.getElementById("confirmarEdicion");
+    controlador3 = "Controllers/ClienteProveedor3Controller.php";
+    div3 = document.getElementById("container3");
+    // Evento y llamada a la función
+    formEdicion1.addEventListener("submit", function(event){
+      event.preventDefault();
+      insertarDatos1(formEdicion1,boton2,controlador3,div3);
+    });
+  }
+  /* ---------------------------------- FIN - (submit) edicion 1 */  
 
+  /* ---------------------------------- INICIO - (submit) eliminacion 1 */
+  // Paso 1: Obtener referencias:
+  const formEliminacion1 = document.getElementById("formEliminacion1");
+  // Paso 2 - Asociación del elemento al evento (submit) y llamada a la función
+  if(formEliminacion1)
+  {
+    // Referencia de los elementos
+    boton3 = document.getElementById("botonEliminacion1");
+    controlador4 = "Controllers/ClienteProveedor5Controller.php";
+    div4 = document.getElementById("container3");
+    // Evento y llamada a la función
+    formEliminacion1.addEventListener("submit", function(event){
+      event.preventDefault();
+      insertarDatos1(formEliminacion1,boton3,controlador4,div4);
+    });
+  }
+  /* ---------------------------------- FIN - (submit) eliminacion 1 */  
 
 
 

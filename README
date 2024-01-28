@@ -1,4 +1,4 @@
 ClienteProveedor1Controller hace la consulta y filtra las consultas
 ClienteProveedor2Controller es el que inserta
 ClienteProveedor3Controller es el que actualiza
-ClienteProveedor4Controller es el borra
+ClienteProveedor4Controller es el que hace la consulta para rellenar los campos de edicion 
