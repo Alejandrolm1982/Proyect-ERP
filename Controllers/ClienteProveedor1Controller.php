@@ -67,8 +67,6 @@ if (!empty($sql)) {
             ";
         }
     }
-} else {
-    echo "Consulta SQL vacía.";
 }
 
 ?>

@@ -63,6 +63,10 @@ if (selectClienteProveedor) {
 
 });
 
+function mostrarFormulario() {
+  document.getElementById('container2').style.display = 'block';
+}
+
 //Login JS
 let switchCtn = document.querySelector("#switch-cnt");
 let switchC1 = document.querySelector("#switch-c1");

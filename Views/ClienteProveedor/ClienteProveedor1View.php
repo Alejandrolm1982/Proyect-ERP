@@ -24,11 +24,41 @@
         <option value="cliente">Cliente</option>
         <option value="proveedor">Proveedor</option>
     </select>
-    <button id="aniadir" class="boton">Añadir</button>
+    <button id="aniadir" class="boton" onclick="mostrarFormulario()">Añadir</button>
     <button id="editar" class="boton">Editar</button>
     <button id="eliminar" class="boton">Eliminar</button>
-    <div id="container1"><!--AQUI TIENE QUE METERSE LA PRIMERA CONSULTA DE LA TABLA FACTURACION-->
+    <div id="container1"><!--AQUI TIENE QUE CARGARSE LA PRIMERA CONSULTA DE LA TABLA cliente/proveedor-->
 
     </div>
+    <div id="container2" style="display: none;">
+    <!-- FORMULARIO DE AÑADIR -->
+    <form id="formularioAgregar">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" name="apellidos">
+
+        <label for="telefono">Teléfono:</label>
+        <input type="text" id="telefono" name="telefono" required>
+
+        <label for="correo">Correo:</label>
+        <input type="email" id="correo" name="correo" required>
+
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" name="direccion" required>
+
+        <label for="metodoPago">Método de Pago:</label>
+        <select id="metodoPago" name="metodoPago" required>
+            <option value="metalico">Metálico</option>
+            <option value="tarjeta">Tarjeta</option>
+        </select>
+
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" name="fecha" required>
+
+        <button type="button" onclick="confirmarAccion()">Confirmar</button>
+    </form>
+</div>
 </body>
 </html>
