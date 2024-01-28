@@ -298,3 +298,37 @@ body {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombreado más pronunciado al pasar el ratón */
   }
 /* FIN - Controles */
+
+/*CSS NAV lateral*/
+.vertical-nav {
+  background-color: #5c9fe8; /* Cambia esto al color que desees */
+  width: 200px; /* Ancho del menú lateral */
+  height: 100vh; /* Altura al 100% del viewport */
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px; /* Espaciado superior del menú */
+  text-align: center;
+}
+
+.vertical-nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.vertical-nav li {
+  padding: 60px;
+  margin: 10px;
+}
+
+.vertical-nav a {
+  text-decoration: none;
+  color: white; /* Color del texto del menú */
+  display: block;
+}
+
+.vertical-nav a:hover {
+  background-color: #b6cee9; /* Cambia esto al color que desees para el hover */
+}

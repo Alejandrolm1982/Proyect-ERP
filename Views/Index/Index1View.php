@@ -8,33 +8,25 @@
     <script src="Assets/js/motor.js"></script>
 </head>
 <body>
-<div class="main">
-    <div class="container a-container" id="a-container">
-        <form id="a-form" class="form" method="POST/GET" action="/your-registration-endpoint">
-            <h2 class="form_title title">Bienvenido</h2>
-            <div class="form__icons">
-                <!-- Your icon images here -->
-            </div>
-            <span class="form__span">Usa las credenciales proporcinadas</span>
-            <input class="form__input" type="text" placeholder="Name" name="name">
-            <input class="form__input" type="password" placeholder="Password" name="password">
-            <button type="submit" class="form__button button submit">LOG IN</button>
-        </form>
-        <a href="./home.php">Home</a>
-    </div>
+    <div class="main">
+        <div class="container a-container" id="a-container">
+            <form id="a-form" class="form" method="POST/GET">
+                <h2 class="form_title title">Bienvenido</h2>
+                <div class="form__icons"></div>
+                <span class="form__span">Usa las credenciales proporcinadas</span>
 
-    <div class="container b-container" id="b-container">
-        <form id="b-form" class="form" method="POST/GET" action="/your-login-endpoint">
-            <h2 class="form_title title">Sign in to Website</h2>
-            <div class="form__icons">
-                <!-- Your icon images here -->
-            </div>
-            <input class="form__input" type="text" placeholder="Email" name="email">
-            <input class="form__input" type="password" placeholder="Password" name="password">
-            <button type="submit" class="form__button button submit">SIGN IN</button>
-        </form>
-    </div>
-</div>
 
+
+
+                <input class="form__input" type="text" placeholder="Name" name="name">
+                <input class="form__input" type="password" placeholder="Password" name="password">
+                <button type="submit" class="form__button button submit">LOG IN</button>
+
+
+                
+            </form>
+        </div>
+    </div>
+    <a href="./home.php">Home</a>
 </body>
 </html>
