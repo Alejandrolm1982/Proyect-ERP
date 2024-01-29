@@ -343,3 +343,52 @@ body {
 .vertical-nav a:hover {
   background-color: #b6cee9; /* Cambia esto al color que desees para el hover */
 }
+
+
+/* Estilos para los campos del formulario */
+.formulario-campo {
+  border-radius: 10px;
+  padding: 8px;
+  font-size: 16px;
+  background: linear-gradient(to right, #007bff, #0056b3); /* Gradiente azul vibrante */
+  color: #040b19; /* Texto blanco */
+  margin-bottom: 10px; /* Espacio entre los campos y otros elementos */
+  margin-right: 5px; /* Espacio entre los campos y otros elementos */
+  margin-left: 5px; /* Espacio entre los campos y otros elementos */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombreado suave */
+}
+
+/* Estilos para los select del formulario */
+.formulario-campo.select {
+  border-radius: 10px;
+  padding: 8px;
+  font-size: 16px;
+  background: linear-gradient(to right, #007bff, #0056b3); /* Gradiente azul vibrante */
+  color: #040b19; /* Texto blanco */
+  margin-bottom: 10px; /* Espacio entre los campos y otros elementos */
+  margin-right: 5px; /* Espacio entre los campos y otros elementos */
+  margin-left: 5px; /* Espacio entre los campos y otros elementos */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombreado suave */
+}
+
+/* Estilos para los botones del formulario */
+.formulario-campo.boton {
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background: linear-gradient(to right, #007bff, #0056b3); /* Gradiente azul vibrante */
+  color: #040b19; /* Texto blanco */
+  border: none;
+  cursor: pointer;
+  margin-top: 10px; /* Espacio entre los botones y otros elementos */
+  margin-right: 5px; /* Espacio entre los botones y otros elementos */
+  margin-left: 5px; /* Espacio entre los botones y otros elementos */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombreado suave */
+}
+
+/* Cambio de color y efecto al pasar el ratón sobre los botones del formulario */
+.formulario-campo.boton:hover {
+  background: linear-gradient(to right, #0056b3, #007bff); /* Cambia el gradiente al pasar el ratón */
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el ratón */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombreado más pronunciado al pasar el ratón */
+}

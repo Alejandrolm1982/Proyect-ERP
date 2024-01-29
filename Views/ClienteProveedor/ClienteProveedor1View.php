@@ -7,7 +7,7 @@
 </head>
 <body>
 
-    <nav class="vertical-nav">
+    <!--<nav class="vertical-nav">
         <ul>
             <li><a href="./Usuario.php">Usuario</a></li>
             <li><a href="./Home.php">Inicio</a></li>
@@ -15,7 +15,7 @@
             <li><a href="./Facturacion.php">Facturacion</a></li>
             <li><a href="./Producto.php">Producto</a></li>
         </ul>
-    </nav>
+    </nav>-->
 
     <label>Selecciona Cliente/Proveedor:</label>
     <select id="cliente/proveedor" name="cliente/proveedor" class="select">
@@ -58,7 +58,7 @@
                 <option value="proveedor">Proveedor</option>
             </select>
 
-            <input type="submit" id="confirmar" name="confirmar" value="confirmar" class="formulario-boton">
+            <input type="submit" id="confirmar" name="confirmar" value="confirmar" class="formulario-boton boton">
         </form>
     </div>
     <div id="container3"></div>

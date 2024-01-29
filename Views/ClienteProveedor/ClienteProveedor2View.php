@@ -41,7 +41,7 @@
                 <option value="proveedor">Proveedor</option>
             </select>
 
-            <input type="submit" id="confirmarEdicion" name="confirmarEdicion" value="confirmarEdicion" class="formulario-boton">
+            <input type="submit" id="confirmarEdicion" name="confirmarEdicion" value="confirmarEdicion" class="formulario-boton boton">
         </form>
     </div>
     <form id="formEliminacion1" class="bloque1">
