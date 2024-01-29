@@ -8,7 +8,7 @@
     <script src="Assets/js/motor.js"></script>
 </head>
 <body>
-    <section>
+    <section id=ajuste1>
     <a href="./Usuario.php">
         <button type="button">
             <img src="Assets/img/mondongo1.jpg" alt="Mondongo Image">
@@ -16,6 +16,7 @@
     </a>
     <h4>Bienvenido, "Usuario"</h4>
     </section>
+
     <article>
         <button type="button">
         <a href="./Clienteproveedor.php">ClienteProveedor</a>

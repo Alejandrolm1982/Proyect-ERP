@@ -8,15 +8,21 @@
 </head>
 <body>
 
-    <nav class="vertical-nav">
-        <ul>
-            <li><a href="./Usuario.php">Usuario</a></li>
-            <li><a href="./Home.php">Inicio</a></li>
-            <li><a href="./Almacen.php">Almacen</a></li>
-            <li><a href="./Facturacion.php">Facturacion</a></li>
-            <li><a href="./Producto.php">Producto</a></li>
-        </ul>
-    </nav>
+    <!--Menu desplegable-->
+    <label for="btn-menu" class="menuEstetica">Menu</label>
+            <input type="checkbox" id="btn-menu">
+            <div class="container-menu">
+            <nav class="vertical-nav cont-menu">
+                <ul>
+                    <li><a href="./Home.php">Inicio</a></li>
+                    <li><a href="./Clienteproveedor.php">Cliente<br>Proveedor</a></li>
+                    <li><a href="./Almacen.php">Almacen</a></li>
+                    <li><a href="./Facturacion.php">Facturacion</a></li>
+                    <li><a href="./Producto.php">Producto</a></li>
+                </ul>
+            </nav>
+            </div>          
+        <!--Fin Menu desplegable-->
 
     <label>Selecciona Cliente/Proveedor:</label>
     <select id="cliente/proveedor" name="cliente/proveedor" class="select">

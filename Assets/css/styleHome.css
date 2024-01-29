@@ -29,3 +29,18 @@ button {
     border: none;
     outline: none;
 }
+#ajuste1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 60px;
+}
+
+/* Opcional: Agregar un poco de espacio alrededor del section */
+section {
+    margin: 10px;
+}
+article
+{
+    margin-top: 50px;
+}
