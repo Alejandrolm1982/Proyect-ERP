@@ -225,12 +225,12 @@ if (selectProducto) {
 
   /* ---------------------------------- INICIO - (submit) edicion 2 */
   // Paso 1: Obtener referencias:
-  const formEdicion2 = document.getElementById("formularioEdicion");
+  const formEdicion2 = document.getElementById("formularioEdicion2");
   // Paso 2 - Asociación del elemento al evento (submit) y llamada a la función
   if(formEdicion2)
   {
     // Referencia de los elementos
-    boton5 = document.getElementById("confirmarEdicion");
+    boton5 = document.getElementById("confirmarEdicion2");
     controlador6 = "Controllers/Producto3Controller.php";
     div6 = document.getElementById("container3");
     // Evento y llamada a la función
@@ -262,12 +262,12 @@ if (selectProducto) {
   
     /* ---------------------------------- INICIO - (submit) eliminacion 2 */
   // Paso 1: Obtener referencias:
-  const formEliminacion2 = document.getElementById("formEliminacion1");
+  const formEliminacion2 = document.getElementById("formEliminacion2");
   // Paso 2 - Asociación del elemento al evento (submit) y llamada a la función
   if(formEliminacion2)
   {
     // Referencia de los elementos
-    boton6 = document.getElementById("botonEliminacion1");
+    boton6 = document.getElementById("botonEliminacion2");
     controlador7 = "Controllers/Producto5Controller.php";
     div7 = document.getElementById("container3");
     // Evento y llamada a la función

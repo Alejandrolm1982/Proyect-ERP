@@ -9,7 +9,7 @@
     <?php require_once "Controllers/Producto4Controller.php"; ?>
     <div id="container2">
         <!-- FORMULARIO DE AÑADIR -->
-        <form id="formularioEdicion" class="formulario">
+        <form id="formularioEdicion2" class="formulario">
             <input type="hidden" id="id_producto" name="id_producto" required class="campo1" placeholder="Identificador" value="<?php echo $_GET['id_producto']; ?>">
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" class="formulario-campo" placeholder="Nombre" value="<?php echo $nombre; ?>" required>
@@ -23,12 +23,12 @@
             <label for="descripcion">Descripción:</label>
             <input type="text" id="descripcion" name="descripcion" class="formulario-campo" placeholder="descripcion" value="<?php echo $descripcion; ?>" required>
 
-            <input type="submit" id="confirmarEdicion" name="confirmarEdicion" value="confirmarEdicion" class="formulario-boton boton">
+            <input type="submit" id="confirmarEdicion2" name="confirmarEdicion2" value="confirmarEdicion" class="formulario-boton boton">
         </form>
     </div>
-    <form id="formEliminacion1" class="bloque1">
+    <form id="formEliminacion2" class="bloque1">
         <input type="hidden" id="textoEliminacion0" name="textoEliminacion0" required class="campo1" placeholder="Identificador" value="<?php echo $_GET['id_producto']; ?>">
-        <input type="submit" id="botonEliminacion1" name="botonEliminacion1" value="Eliminar" class="boton">
+        <input type="submit" id="botonEliminacion2" name="botonEliminacion1" value="Eliminar" class="boton">
     </form>
     <div id="container3"></div>
 </body>
