@@ -58,17 +58,18 @@ if (!empty($sql)) {
         foreach ($data as $row) {
             echo "
                 <div class='bloque0'>
-                    <div class='bloque1'>$row->nombre</div>
-                    <div class='bloque1'>$row->direccion</div>
-                    <div class='bloque1'>$row->telefono</div>
-                    <div class='bloque1'>$row->correo</div>
-                    <div class='bloque1'>$row->tipo</div>
+                    <a class='bloque0' href='edicionEliminacionClienteProveedor.php?id_cliente_proveedor=$row->id_cliente_proveedor'> 
+                        <div class='bloque1'>$row->nombre</div>
+                        <div class='bloque1'>$row->direccion</div>
+                        <div class='bloque1'>$row->telefono</div>
+                        <div class='bloque1'>$row->correo</div>
+                        <div class='bloque1'>$row->tipo</div>
+                    </a>      
                 </div>
+                
             ";
         }
     }
-} else {
-    echo "Consulta SQL vacía.";
 }
 
 ?>

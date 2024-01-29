@@ -13,11 +13,11 @@
         }
 
         // No devuelve datos de la BD (insert, update, delete con consultas preparadas)
-        public function setDataPreparedStatements1($sql, $par1, $par2, $par3, $par4, $par5, $par6, $par7, $par8)
+        public function setDataPreparedStatements1($sql, $par1, $par2, $par3, $par4, $par5, $par6, $par7, $par8, $par9)
         {
             $stmt = $this->mysqli->prepare($sql);
         
-            $stmt->bind_param("ssssssss", $par1, $par2, $par3, $par4, $par5, $par6, $par7, $par8);
+            $stmt->bind_param("ssssssssi", $par1, $par2, $par3, $par4, $par5, $par6, $par7, $par8, $par9);
         
             if(!$stmt->execute())
             {
