@@ -1,15 +1,13 @@
-function deshabilitarControl1(control1)
-{
-    control1.classList.remove("boton1");
-    control1.classList.add("boton1Inhabilitado");
-    control1.disable = true;
+function deshabilitarControl1(control1) {
+  control1.classList.remove("boton1");
+  control1.classList.add("boton1Inhabilitado");
+  control1.disabled = true;
 }
 
-function habilitarControl1(control1)
-{
-    control1.classList.remove("boton1Inhabilitado");
-    control1.classList.add("boton1");
-    control1.disable = false;
+function habilitarControl1(control1) {
+  control1.classList.remove("boton1Inhabilitado");
+  control1.classList.add("boton1");
+  control1.disabled = false;
 }
 
 
@@ -74,7 +72,11 @@ function insertarDatos1(form1, boton1, controlador1, div1)
   ajaxPost2(form1,controlador1,div1);
   // Opcion 2: El mensaje se muestra en una alert (ajaxPost2)
   // ajaxPost2(form1,controlador1,div1);
-  habilitarControl1(boton1);
+  // Habilitar el botón después de un tiempo (por ejemplo, 3 segundos)
+  setTimeout(function () {
+    habilitarControl1(boton1);
+  }, 3000);
+
   form1.reset();
 }
 
@@ -111,6 +113,15 @@ window.addEventListener('load', function(){
   let controlador4;
   let boton3;
   let div4;
+  let controlador5;
+  let boton4;
+  let div5;
+  let controlador6;
+  let boton5;
+  let div6;
+  let controlador7;
+  let boton6;
+  let div7;
 
 /* ---------------------------------- INICIO - (submit) Seleccionar 1 */
 // Paso 1: Obtener referencias:
@@ -176,18 +187,18 @@ if (selectProducto) {
 
   /* ---------------------------------- INICIO - (submit) Insertar 2 */
   // Paso 1: Obtener referencias:
-  const formInsercion2 = document.getElementById("formularioAgregar");
+  const formInsercion2 = document.getElementById("formularioAgregar2");
   // Paso 2 - Asociación del elemento al evento (submit) y llamada a la función
   if(formInsercion2)
   {
     // Referencia de los elementos
-    boton1 = document.getElementById("confirmar");
-    controlador2 = "Controllers/Producto2Controller.php";
-    div2 = document.getElementById("container3");
+    boton4 = document.getElementById("confirmar2");
+    controlador5 = "Controllers/Producto2Controller.php";
+    div5 = document.getElementById("container3");
     // Evento y llamada a la función
     formInsercion2.addEventListener("submit", function(event){
       event.preventDefault();
-      insertarDatos1(formInsercion2,boton1,controlador2,div2);
+      insertarDatos1(formInsercion2,boton4,controlador5,div5);
     });
   }
   /* ---------------------------------- FIN - (submit) Insertar 2 */
@@ -219,13 +230,13 @@ if (selectProducto) {
   if(formEdicion2)
   {
     // Referencia de los elementos
-    boton2 = document.getElementById("confirmarEdicion");
-    controlador3 = "Controllers/Producto3Controller.php";
-    div3 = document.getElementById("container3");
+    boton5 = document.getElementById("confirmarEdicion");
+    controlador6 = "Controllers/Producto3Controller.php";
+    div6 = document.getElementById("container3");
     // Evento y llamada a la función
     formEdicion2.addEventListener("submit", function(event){
       event.preventDefault();
-      insertarDatos1(formEdicion2,boton2,controlador3,div3);
+      insertarDatos1(formEdicion2,boton5,controlador6,div6);
     });
   }
   /* ---------------------------------- FIN - (submit) edicion 2 */ 
@@ -256,13 +267,13 @@ if (selectProducto) {
   if(formEliminacion2)
   {
     // Referencia de los elementos
-    boton3 = document.getElementById("botonEliminacion1");
-    controlador4 = "Controllers/Producto5Controller.php";
-    div4 = document.getElementById("container3");
+    boton6 = document.getElementById("botonEliminacion1");
+    controlador7 = "Controllers/Producto5Controller.php";
+    div7 = document.getElementById("container3");
     // Evento y llamada a la función
     formEliminacion2.addEventListener("submit", function(event){
       event.preventDefault();
-      insertarDatos1(formEliminacion2,boton3,controlador4,div4);
+      insertarDatos1(formEliminacion2,boton6,controlador7,div7);
     });
   }
   /* ---------------------------------- FIN - (submit) eliminacion 2 */  

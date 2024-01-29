@@ -34,7 +34,7 @@
     <button id="aniadir" class="boton" onclick="toggleFormulario()">Añadir</button>
     <div id="container2" style="display: none;">
         <!-- FORMULARIO DE AÑADIR -->
-        <form id="formularioAgregar" class="formulario">
+        <form id="formularioAgregar2" class="formulario">
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" class="formulario-campo" placeholder="Nombre" required>
 
@@ -47,7 +47,7 @@
             <label for="descripcion">Descripción:</label>
             <input type="text" id="descripcion" name="descripcion" class="formulario-campo" placeholder="descripcion" required>
 
-            <input type="submit" id="confirmar" name="confirmar" value="confirmar" class="formulario-boton boton">
+            <input type="submit" id="confirmar2" name="confirmar2" value="confirmar" class="formulario-boton boton">
         </form>
     </div>
     <div id="container3"></div>
