@@ -198,7 +198,7 @@ if (selectAlmacen) {
     const valorSeleccionado = selectAlmacen.value;
 
     // Llama a la función pasando el valor seleccionado
-    seleccionarDatos2(valorSeleccionado, controlador1, div1);
+    seleccionarDatos3(valorSeleccionado, controlador1, div1);
   });
 }
 /* ---------------------------------- FIN - (submit) Seleccionar 3 */

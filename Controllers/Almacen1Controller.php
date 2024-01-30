@@ -40,15 +40,15 @@ if (!empty($sql)) {
     } else {
         echo "
             <div class='bloque0 negrita'>
-                <div class='bloque1'>fechas</div>
-                <div class='bloque1'>capacidad</div>
-                <div class='bloque1'>ubicacion</div>
+                <div class='bloque1'>FECHA</div>
+                <div class='bloque1'>CAPACIDAD</div>
+                <div class='bloque1'>UBICACION</div>
             </div>
         ";
         foreach ($data as $row) {
             echo "
                 <div class='bloque0'>
-                    <a class='bloque0' href='edicionEliminacionClienteProveedor.php?id_cliente_proveedor=$row->id_almacen'> 
+                    <a class='bloque0' href='edicionEliminacionAlmacen.php?id_almacen=$row->id_almacen'> 
                         <div class='bloque1'>$row->fechas</div>
                         <div class='bloque1'>$row->capacidad</div>
                         <div class='bloque1'>$row->ubicacion</div>
