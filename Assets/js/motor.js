@@ -98,6 +98,14 @@ function seleccionarDatos2(valorSeleccionado, controlador1, div1) {
   // Llamada a la función ajaxPost1 con el objeto FormData
   ajaxPost1(formData, controlador1, div1);
 }
+function seleccionarDatos3(valorSeleccionado, controlador1, div1) {
+  // Creación del objeto FormData y agregando el valor seleccionado
+  const formData = new FormData();
+  formData.append("almacen", valorSeleccionado);
+
+  // Llamada a la función ajaxPost1 con el objeto FormData
+  ajaxPost1(formData, controlador1, div1);
+}
 
 
 window.addEventListener('load', function(){
@@ -122,6 +130,15 @@ window.addEventListener('load', function(){
   let controlador7;
   let boton6;
   let div7;
+  let boton7;
+  let div8;
+  let controlador8;
+  let boton8;
+  let div9;
+  let controlador9;
+  let boton9;
+  let div10;
+  let controlador10;
 
 /* ---------------------------------- INICIO - (submit) Seleccionar 1 */
 // Paso 1: Obtener referencias:
@@ -165,6 +182,26 @@ if (selectProducto) {
 }
 /* ---------------------------------- FIN - (submit) Seleccionar 2 */
 
+/* ---------------------------------- INICIO - (submit) Seleccionar 3 */
+// Paso 1: Obtener referencias:
+const selectAlmacen = document.getElementById("almacen");
+// Paso 2 - Asociación del elemento al evento (change) y llamada a la función
+if (selectAlmacen) {
+  // Referencia de los elementos
+  controlador1 = "Controllers/Almacen1Controller.php";
+  div1 = document.getElementById("container1");
+
+  selectAlmacen.addEventListener("change", function(event) {
+    event.preventDefault();
+
+    // Obtén el valor seleccionado del <select>
+    const valorSeleccionado = selectAlmacen.value;
+
+    // Llama a la función pasando el valor seleccionado
+    seleccionarDatos2(valorSeleccionado, controlador1, div1);
+  });
+}
+/* ---------------------------------- FIN - (submit) Seleccionar 3 */
 
 
   /* ---------------------------------- INICIO - (submit) Insertar 1 */
@@ -202,7 +239,23 @@ if (selectProducto) {
     });
   }
   /* ---------------------------------- FIN - (submit) Insertar 2 */
-
+ /* ---------------------------------- INICIO - (submit) Insertar 3 */
+  // Paso 1: Obtener referencias:
+  const formInsercion3 = document.getElementById("formularioAgregar3");
+  // Paso 2 - Asociación del elemento al evento (submit) y llamada a la función
+  if(formInsercion3)
+  {
+    // Referencia de los elementos
+    boton7 = document.getElementById("confirmar3");
+    controlador8 = "Controllers/Almacen2Controller.php";
+    div8 = document.getElementById("container3");
+    // Evento y llamada a la función
+    formInsercion3.addEventListener("submit", function(event){
+      event.preventDefault();
+      insertarDatos1(formInsercion3,boton7,controlador8,div8);
+    });
+  }
+  /* ---------------------------------- FIN - (submit) Insertar 3 */
 
 
   /* ---------------------------------- INICIO - (submit) edicion 1 */
@@ -240,6 +293,23 @@ if (selectProducto) {
     });
   }
   /* ---------------------------------- FIN - (submit) edicion 2 */ 
+    /* ---------------------------------- INICIO - (submit) edicion 3 */
+  // Paso 1: Obtener referencias:
+  const formEdicion3 = document.getElementById("formularioEdicion3");
+  // Paso 2 - Asociación del elemento al evento (submit) y llamada a la función
+  if(formEdicion3)
+  {
+    // Referencia de los elementos
+    boton8 = document.getElementById("confirmarEdicion3");
+    controlador9 = "Controllers/Almacen3Controller.php";
+    div9 = document.getElementById("container3");
+    // Evento y llamada a la función
+    formEdicion2.addEventListener("submit", function(event){
+      event.preventDefault();
+      insertarDatos1(formEdicion3,boton8,controlador9,div9);
+    });
+  }
+  /* ---------------------------------- FIN - (submit) edicion 3 */ 
 
 
   /* ---------------------------------- INICIO - (submit) eliminacion 1 */
@@ -277,6 +347,24 @@ if (selectProducto) {
     });
   }
   /* ---------------------------------- FIN - (submit) eliminacion 2 */  
+
+      /* ---------------------------------- INICIO - (submit) eliminacion 3 */
+  // Paso 1: Obtener referencias:
+  const formEliminacion3 = document.getElementById("formEliminacion3");
+  // Paso 2 - Asociación del elemento al evento (submit) y llamada a la función
+  if(formEliminacion3)
+  {
+    // Referencia de los elementos
+    boton9 = document.getElementById("botonEliminacion3");
+    controlador10 = "Controllers/Almacen5Controller.php";
+    div10 = document.getElementById("container3");
+    // Evento y llamada a la función
+    formEliminacion2.addEventListener("submit", function(event){
+      event.preventDefault();
+      insertarDatos1(formEliminacion3,boton9,controlador10,div10);
+    });
+  }
+  /* ---------------------------------- FIN - (submit) eliminacion 3 */  
 
 
 
