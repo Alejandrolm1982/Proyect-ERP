@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Producto</title>
+    <title>Productos</title>
 </head>
 <body>
-<!--Menu desplegable-->
+<!--Menu desplegable
 <label for="btn-menu" class="menuEstetica">Menu</label>
             <input type="checkbox" id="btn-menu">
             <div class="container-menu">
@@ -21,7 +20,39 @@
                 </ul>
                 <label for="btn-menu">✖️</label>
             </nav>
-            </div>          
-        <!--Fin Menu desplegable-->
+            </div>  
+            
+            
+
+
+        Fin Menu desplegable-->
+
+
+    <select id="producto" name="producto" class="select">
+        <option ></option>
+        <option value="producto">producto</option>
+    </select>
+    <button id="aniadir" class="boton" onclick="toggleFormulario()">Añadir</button>
+    <div id="container2" style="display: none;">
+        <!-- FORMULARIO DE AÑADIR -->
+        <form id="formularioAgregar2" class="formulario">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" class="formulario-campo" placeholder="Nombre" required>
+
+            <label for="stock">Stock:</label>
+            <input type="text" id="stock" name="stock" class="formulario-campo" placeholder="stock" required>
+
+            <label for="precio">Precio:</label>
+            <input type="text" id="precio" name="precio" class="formulario-campo" placeholder="precio" required>
+
+            <label for="descripcion">Descripción:</label>
+            <input type="text" id="descripcion" name="descripcion" class="formulario-campo" placeholder="descripcion" required>
+
+            <input type="submit" id="confirmar2" name="confirmar2" value="confirmar" class="formulario-boton boton">
+        </form>
+    </div>
+    <div id="container3"></div>
+    <div id="container1"></div><!--AQUI TIENE QUE CARGARSE LA PRIMERA CONSULTA DE LA TABLA cliente/proveedor-->
+
 </body>
 </html>

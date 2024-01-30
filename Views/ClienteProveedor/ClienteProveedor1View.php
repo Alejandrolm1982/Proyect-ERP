@@ -65,7 +65,7 @@
                 <option value="proveedor">Proveedor</option>
             </select>
 
-            <input type="submit" id="confirmar" name="confirmar" value="confirmar" class="formulario-boton">
+            <input type="submit" id="confirmar" name="confirmar" value="confirmar" class="formulario-boton boton">
         </form>
     </div>
     <div id="container3"></div>

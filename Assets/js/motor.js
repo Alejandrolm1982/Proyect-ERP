@@ -1,15 +1,13 @@
-function deshabilitarControl1(control1)
-{
-    control1.classList.remove("boton1");
-    control1.classList.add("boton1Inhabilitado");
-    control1.disable = true;
+function deshabilitarControl1(control1) {
+  control1.classList.remove("boton1");
+  control1.classList.add("boton1Inhabilitado");
+  control1.disabled = true;
 }
 
-function habilitarControl1(control1)
-{
-    control1.classList.remove("boton1Inhabilitado");
-    control1.classList.add("boton1");
-    control1.disable = false;
+function habilitarControl1(control1) {
+  control1.classList.remove("boton1Inhabilitado");
+  control1.classList.add("boton1");
+  control1.disabled = false;
 }
 
 
@@ -74,7 +72,11 @@ function insertarDatos1(form1, boton1, controlador1, div1)
   ajaxPost2(form1,controlador1,div1);
   // Opcion 2: El mensaje se muestra en una alert (ajaxPost2)
   // ajaxPost2(form1,controlador1,div1);
-  habilitarControl1(boton1);
+  // Habilitar el botón después de un tiempo (por ejemplo, 3 segundos)
+  setTimeout(function () {
+    habilitarControl1(boton1);
+  }, 3000);
+
   form1.reset();
 }
 
@@ -84,8 +86,14 @@ function seleccionarDatos1(valorSeleccionado, controlador1, div1) {
   const formData = new FormData();
   formData.append("cliente/proveedor", valorSeleccionado);
 
-  // Imprime el contenido del FormData en la consola para verificar
-  console.log("Contenido de FormData:", formData);
+  // Llamada a la función ajaxPost1 con el objeto FormData
+  ajaxPost1(formData, controlador1, div1);
+}
+
+function seleccionarDatos2(valorSeleccionado, controlador1, div1) {
+  // Creación del objeto FormData y agregando el valor seleccionado
+  const formData = new FormData();
+  formData.append("producto", valorSeleccionado);
 
   // Llamada a la función ajaxPost1 con el objeto FormData
   ajaxPost1(formData, controlador1, div1);
@@ -105,6 +113,15 @@ window.addEventListener('load', function(){
   let controlador4;
   let boton3;
   let div4;
+  let controlador5;
+  let boton4;
+  let div5;
+  let controlador6;
+  let boton5;
+  let div6;
+  let controlador7;
+  let boton6;
+  let div7;
 
 /* ---------------------------------- INICIO - (submit) Seleccionar 1 */
 // Paso 1: Obtener referencias:
@@ -127,6 +144,29 @@ if (selectClienteProveedor) {
 }
 /* ---------------------------------- FIN - (submit) Seleccionar 1 */
 
+/* ---------------------------------- INICIO - (submit) Seleccionar 2 */
+// Paso 1: Obtener referencias:
+const selectProducto = document.getElementById("producto");
+// Paso 2 - Asociación del elemento al evento (change) y llamada a la función
+if (selectProducto) {
+  // Referencia de los elementos
+  controlador1 = "Controllers/Producto1Controller.php";
+  div1 = document.getElementById("container1");
+
+  selectProducto.addEventListener("change", function(event) {
+    event.preventDefault();
+
+    // Obtén el valor seleccionado del <select>
+    const valorSeleccionado = selectProducto.value;
+
+    // Llama a la función pasando el valor seleccionado
+    seleccionarDatos2(valorSeleccionado, controlador1, div1);
+  });
+}
+/* ---------------------------------- FIN - (submit) Seleccionar 2 */
+
+
+
   /* ---------------------------------- INICIO - (submit) Insertar 1 */
   // Paso 1: Obtener referencias:
   const formInsercion1 = document.getElementById("formularioAgregar");
@@ -144,6 +184,26 @@ if (selectClienteProveedor) {
     });
   }
   /* ---------------------------------- FIN - (submit) Insertar 1 */
+
+  /* ---------------------------------- INICIO - (submit) Insertar 2 */
+  // Paso 1: Obtener referencias:
+  const formInsercion2 = document.getElementById("formularioAgregar2");
+  // Paso 2 - Asociación del elemento al evento (submit) y llamada a la función
+  if(formInsercion2)
+  {
+    // Referencia de los elementos
+    boton4 = document.getElementById("confirmar2");
+    controlador5 = "Controllers/Producto2Controller.php";
+    div5 = document.getElementById("container3");
+    // Evento y llamada a la función
+    formInsercion2.addEventListener("submit", function(event){
+      event.preventDefault();
+      insertarDatos1(formInsercion2,boton4,controlador5,div5);
+    });
+  }
+  /* ---------------------------------- FIN - (submit) Insertar 2 */
+
+
 
   /* ---------------------------------- INICIO - (submit) edicion 1 */
   // Paso 1: Obtener referencias:
@@ -163,6 +223,25 @@ if (selectClienteProveedor) {
   }
   /* ---------------------------------- FIN - (submit) edicion 1 */  
 
+  /* ---------------------------------- INICIO - (submit) edicion 2 */
+  // Paso 1: Obtener referencias:
+  const formEdicion2 = document.getElementById("formularioEdicion2");
+  // Paso 2 - Asociación del elemento al evento (submit) y llamada a la función
+  if(formEdicion2)
+  {
+    // Referencia de los elementos
+    boton5 = document.getElementById("confirmarEdicion2");
+    controlador6 = "Controllers/Producto3Controller.php";
+    div6 = document.getElementById("container3");
+    // Evento y llamada a la función
+    formEdicion2.addEventListener("submit", function(event){
+      event.preventDefault();
+      insertarDatos1(formEdicion2,boton5,controlador6,div6);
+    });
+  }
+  /* ---------------------------------- FIN - (submit) edicion 2 */ 
+
+
   /* ---------------------------------- INICIO - (submit) eliminacion 1 */
   // Paso 1: Obtener referencias:
   const formEliminacion1 = document.getElementById("formEliminacion1");
@@ -180,6 +259,24 @@ if (selectClienteProveedor) {
     });
   }
   /* ---------------------------------- FIN - (submit) eliminacion 1 */  
+  
+    /* ---------------------------------- INICIO - (submit) eliminacion 2 */
+  // Paso 1: Obtener referencias:
+  const formEliminacion2 = document.getElementById("formEliminacion2");
+  // Paso 2 - Asociación del elemento al evento (submit) y llamada a la función
+  if(formEliminacion2)
+  {
+    // Referencia de los elementos
+    boton6 = document.getElementById("botonEliminacion2");
+    controlador7 = "Controllers/Producto5Controller.php";
+    div7 = document.getElementById("container3");
+    // Evento y llamada a la función
+    formEliminacion2.addEventListener("submit", function(event){
+      event.preventDefault();
+      insertarDatos1(formEliminacion2,boton6,controlador7,div7);
+    });
+  }
+  /* ---------------------------------- FIN - (submit) eliminacion 2 */  
 
 
 

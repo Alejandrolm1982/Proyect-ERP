@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Edicion y Eliminacion de Clientes/Proveedores</title>
 </head>
 <body>
 <?php require_once "Controllers/ClienteProveedor4Controller.php"; ?>
@@ -41,7 +41,7 @@
                 <option value="proveedor">Proveedor</option>
             </select>
 
-            <input type="submit" id="confirmarEdicion" name="confirmarEdicion" value="confirmarEdicion" class="formulario-boton">
+            <input type="submit" id="confirmarEdicion" name="confirmarEdicion" value="confirmarEdicion" class="formulario-boton boton">
         </form>
     </div>
     <form id="formEliminacion1" class="bloque1">
