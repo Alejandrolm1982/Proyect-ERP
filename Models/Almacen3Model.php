@@ -17,7 +17,7 @@
         {
             $stmt = $this->mysqli->prepare($sql);
         
-            $stmt->bind_param("ssssi", $par1, $par2, $par3, $par4);
+            $stmt->bind_param("sssi", $par1, $par2, $par3, $par4);
         
             if(!$stmt->execute())
             {

@@ -2,7 +2,7 @@
 
 // Recibe los datos del formulario
 $id_almacen = empty($_POST['id_almacen']) ? '' : $_POST['id_almacen'];
-$fechas = empty($_POST['fechas']) ? '' : $_POST['fechas'];
+$fechas = empty($_POST['fecha']) ? '' : $_POST['fecha'];
 $capacidad = empty($_POST['capacidad']) ? '' : $_POST['capacidad'];
 $ubicacion = empty($_POST['ubicacion']) ? '' : $_POST['ubicacion'];
 

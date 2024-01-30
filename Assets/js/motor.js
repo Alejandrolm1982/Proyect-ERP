@@ -304,7 +304,7 @@ if (selectAlmacen) {
     controlador9 = "Controllers/Almacen3Controller.php";
     div9 = document.getElementById("container3");
     // Evento y llamada a la función
-    formEdicion2.addEventListener("submit", function(event){
+    formEdicion3.addEventListener("submit", function(event){
       event.preventDefault();
       insertarDatos1(formEdicion3,boton8,controlador9,div9);
     });
@@ -359,7 +359,7 @@ if (selectAlmacen) {
     controlador10 = "Controllers/Almacen5Controller.php";
     div10 = document.getElementById("container3");
     // Evento y llamada a la función
-    formEliminacion2.addEventListener("submit", function(event){
+    formEliminacion3.addEventListener("submit", function(event){
       event.preventDefault();
       insertarDatos1(formEliminacion3,boton9,controlador10,div10);
     });

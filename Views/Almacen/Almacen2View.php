@@ -13,13 +13,13 @@
             <input type="hidden" id="id_almacen" name="id_almacen" required class="campo1" placeholder="Identificador" value="<?php echo $_GET['id_almacen']; ?>">
 
             <label for="fecha">fecha:</label>
-            <input type="text" id="fecha" name="fecha" class="formulario-campo" placeholder="fecha" value="<?php echo $fecha; ?>" required>
+            <input type="text" id="fecha" name="fecha" class="formulario-campo" placeholder="fecha" value="<?php echo $fechas; ?>" required>
 
             <label for="capacidad">capacidad:</label>
             <input type="text" id="capacidad" name="capacidad" class="formulario-campo" placeholder="capacidad" value="<?php echo $capacidad; ?>" required>
 
-            <label for="Ubicacion">Ubicacion:</label>
-            <input type="text" id="Ubicacion" name="Ubicacion" class="formulario-campo" placeholder="Ubicacion" value="<?php echo $Ubicacion; ?>" required>
+            <label for="ubicacion">Ubicacion:</label>
+            <input type="text" id="ubicacion" name="ubicacion" class="formulario-campo" placeholder="ubicacion" value="<?php echo $ubicacion; ?>" required>
 
             <input type="submit" id="confirmarEdicion3" name="confirmarEdicion2" value="confirmarEdicion" class="formulario-boton boton">
         </form>
