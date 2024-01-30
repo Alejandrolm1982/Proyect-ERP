@@ -1,7 +1,7 @@
 <?php
 
     // Recibe los datos del formulario
-    $fechas = empty($_POST['fechas']) ? '' : $_POST['fechas'];
+    $fecha = empty($_POST['fecha']) ? '' : $_POST['fecha'];
     $capacidad = empty($_POST['capacidad']) ? '' : $_POST['capacidad'];
     $ubicacion = empty($_POST['ubicacion']) ? '' : $_POST['ubicacion'];
 
@@ -16,7 +16,7 @@
     // Llamada al método
     $sql = "INSERT INTO almacen (fechas, capacidad, ubicacion)
     VALUES (?, ?, ?)";
-    $data = $oData->setDataPreparedStatements1($sql, $fechas, $capacidad, $ubicacion);
+    $data = $oData->setDataPreparedStatements1($sql, $fecha, $capacidad, $ubicacion);
     
     // Devolución del resultado obtenido
     echo $data;
