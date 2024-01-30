@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Facturacion</title>
 </head>
 <body>
@@ -23,5 +22,36 @@
             </nav>
             </div>          
         <!--Fin Menu desplegable-->
+
+<select id="facturacion" name="facturacion" class="select">
+    <option ></option>
+    <option value="facturacion">Facturación</option>
+</select>
+<button id="aniadir" class="boton" onclick="toggleFormulario()">Añadir</button>
+<div id="container2" style="display: none;">
+<!-- FORMULARIO DE AÑADIR -->
+<form id="formularioAgregar4" class="formulario">
+
+    <label for="tipoTransaccion">Tipo de Transacción:</label>
+    <select id="tipoTransaccion" name="tipoTransaccion" class="select" >
+        <option value="compra">Compra</option>
+        <option value="venta">Venta</option>
+    </select>
+
+    <label for="fecha">Fecha:</label>
+    <input type="date" id="fecha" name="fecha" class="formulario-campo" placeholder="Fecha" >
+
+    <label for="factura">factura:</label>
+    <input type="text" id="factura" name="factura" class="formulario-campo" placeholder="factura" required>
+
+    <label for="albaran">Albarán:</label>
+    <input type="text" id="albaran" name="albaran" class="formulario-campo" placeholder="albaran" required>
+
+    <input type="submit" id="confirmar4" name="confirmar4" value="confirmar" class="formulario-boton boton">
+</form>
+</div>
+<div id="container3"></div>
+<div id="container1"></div><!--AQUI TIENE QUE CARGARSE LA PRIMERA CONSULTA DE LA TABLA cliente/proveedor-->
+
 </body>
 </html>

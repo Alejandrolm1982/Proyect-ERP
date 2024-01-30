@@ -106,6 +106,14 @@ function seleccionarDatos3(valorSeleccionado, controlador1, div1) {
   // Llamada a la función ajaxPost1 con el objeto FormData
   ajaxPost1(formData, controlador1, div1);
 }
+function seleccionarDatos4(valorSeleccionado, controlador1, div1) {
+  // Creación del objeto FormData y agregando el valor seleccionado
+  const formData = new FormData();
+  formData.append("facturacion", valorSeleccionado);
+
+  // Llamada a la función ajaxPost1 con el objeto FormData
+  ajaxPost1(formData, controlador1, div1);
+}
 
 
 window.addEventListener('load', function(){
@@ -139,6 +147,15 @@ window.addEventListener('load', function(){
   let boton9;
   let div10;
   let controlador10;
+  let boton10;
+  let controlador11;
+  let div11;
+  let boton11;
+  let controlador12;
+  let div12;
+  let boton12;
+  let controlador13;
+  let div13;
 
 /* ---------------------------------- INICIO - (submit) Seleccionar 1 */
 // Paso 1: Obtener referencias:
@@ -203,6 +220,28 @@ if (selectAlmacen) {
 }
 /* ---------------------------------- FIN - (submit) Seleccionar 3 */
 
+/* ---------------------------------- INICIO - (submit) Seleccionar 4 */
+// Paso 1: Obtener referencias:
+const selectFacturacion = document.getElementById("facturacion");
+// Paso 2 - Asociación del elemento al evento (change) y llamada a la función
+if (selectFacturacion) {
+  // Referencia de los elementos
+  controlador1 = "Controllers/Facturacion1Controller.php";
+  div1 = document.getElementById("container1");
+
+  selectFacturacion.addEventListener("change", function(event) {
+    event.preventDefault();
+
+    // Obtén el valor seleccionado del <select>
+    const valorSeleccionado = selectFacturacion.value;
+
+    // Llama a la función pasando el valor seleccionado
+    seleccionarDatos4(valorSeleccionado, controlador1, div1);
+  });
+}
+/* ---------------------------------- FIN - (submit) Seleccionar 4 */
+
+
 
   /* ---------------------------------- INICIO - (submit) Insertar 1 */
   // Paso 1: Obtener referencias:
@@ -239,6 +278,8 @@ if (selectAlmacen) {
     });
   }
   /* ---------------------------------- FIN - (submit) Insertar 2 */
+
+
  /* ---------------------------------- INICIO - (submit) Insertar 3 */
   // Paso 1: Obtener referencias:
   const formInsercion3 = document.getElementById("formularioAgregar3");
@@ -256,6 +297,24 @@ if (selectAlmacen) {
     });
   }
   /* ---------------------------------- FIN - (submit) Insertar 3 */
+
+   /* ---------------------------------- INICIO - (submit) Insertar 4 */
+  // Paso 1: Obtener referencias:
+  const formInsercion4 = document.getElementById("formularioAgregar4");
+  // Paso 2 - Asociación del elemento al evento (submit) y llamada a la función
+  if(formInsercion4)
+  {
+    // Referencia de los elementos
+    boton10 = document.getElementById("confirmar4");
+    controlador11 = "Controllers/Facturacion2Controller.php";
+    div11 = document.getElementById("container3");
+    // Evento y llamada a la función
+    formInsercion4.addEventListener("submit", function(event){
+      event.preventDefault();
+      insertarDatos1(formInsercion4,boton10,controlador11,div11);
+    });
+  }
+  /* ---------------------------------- FIN - (submit) Insertar 4 */
 
 
   /* ---------------------------------- INICIO - (submit) edicion 1 */
@@ -311,6 +370,24 @@ if (selectAlmacen) {
   }
   /* ---------------------------------- FIN - (submit) edicion 3 */ 
 
+  /* ---------------------------------- INICIO - (submit) edicion 4 */
+  // Paso 1: Obtener referencias:
+  const formEdicion4 = document.getElementById("formularioEdicion4");
+  // Paso 2 - Asociación del elemento al evento (submit) y llamada a la función
+  if(formEdicion4)
+  {
+    // Referencia de los elementos
+    boton11 = document.getElementById("confirmarEdicion4");
+    controlador12 = "Controllers/Facturacion3Controller.php";
+    div12 = document.getElementById("container3");
+    // Evento y llamada a la función
+    formEdicion4.addEventListener("submit", function(event){
+      event.preventDefault();
+      insertarDatos1(formEdicion4,boton11,controlador12,div12);
+    });
+  }
+  /* ---------------------------------- FIN - (submit) edicion 4 */ 
+
 
   /* ---------------------------------- INICIO - (submit) eliminacion 1 */
   // Paso 1: Obtener referencias:
@@ -365,6 +442,25 @@ if (selectAlmacen) {
     });
   }
   /* ---------------------------------- FIN - (submit) eliminacion 3 */  
+
+
+  /* ---------------------------------- INICIO - (submit) eliminacion 4 */
+  // Paso 1: Obtener referencias:
+  const formEliminacion4 = document.getElementById("formEliminacion4");
+  // Paso 2 - Asociación del elemento al evento (submit) y llamada a la función
+  if(formEliminacion4)
+  {
+    // Referencia de los elementos
+    boton12 = document.getElementById("botonEliminacion4");
+    controlador13 = "Controllers/Facturacion5Controller.php";
+    div13 = document.getElementById("container3");
+    // Evento y llamada a la función
+    formEliminacion4.addEventListener("submit", function(event){
+      event.preventDefault();
+      insertarDatos1(formEliminacion4,boton12,controlador13,div13);
+    });
+  }
+  /* ---------------------------------- FIN - (submit) eliminacion 4 */  
 
 
 
