@@ -343,3 +343,115 @@ body {
 .vertical-nav a:hover {
   background-color: #b6cee9; /* Cambia esto al color que desees para el hover */
 }
+/*Menu lateral*/
+/*Menù lateral*/
+#btn-menu{
+  display: none;
+}
+.container-menu{
+  position: absolute;
+  background: rgba(0,0,0,0.5);
+  width: 100%;
+  height: 100vh;
+  top: 0;left: 0;
+  transition: all 500ms ease;
+  opacity: 0;
+  visibility: hidden;
+}
+#btn-menu:checked ~ .container-menu{
+  opacity: 1;
+  visibility: visible;
+}
+.cont-menu{
+  width: 100%;
+  max-width: 250px;
+  background: #1c1c1c;
+  height: 100vh;
+  position: relative;
+  transition: all 500ms ease;
+  transform: translateX(-100%);
+}
+#btn-menu:checked ~ .container-menu .cont-menu{
+  transform: translateX(0%);
+}
+.cont-menu nav{
+  transform: translateY(15%);
+}
+.cont-menu nav a{
+  display: block;
+  text-decoration: none;
+  padding: 20px;
+  color: #c7c7c7;
+  border-left: 5px solid transparent;
+  transition: all 400ms ease;
+}
+.cont-menu nav a:hover{
+  border-left: 5px solid #c7c7c7;
+  background: #1f1f1f;
+}
+.cont-menu label{
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+}
+/*Fin de Menù lateral*/
+/*Zona de usuarios*/
+.user-info {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  margin: 20px auto; /* Centra horizontalmente */
+}
+
+.user-info h4 {
+  color: #333;
+  text-align: center;
+}
+
+.user-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.user-info li {
+  margin-bottom: 10px;
+}
+
+.user-info button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.user-info button:hover {
+  background-color: #2980b9;
+}
+/*estetica menu*/
+.menuEstetica {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #3498db; /* Color de fondo azul */
+  color: #fff; /* Color del texto blanco */
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px; /* Ajusta la distancia desde la parte superior */
+  left: 10px; /* Ajusta la distancia desde la izquierda */
+}
+
+.menuEstetica:hover {
+  background-color: #2980b9; /* Cambio de color al pasar el mouse */
+}
+

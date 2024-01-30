@@ -20,7 +20,9 @@
                     <li><a href="./Facturacion.php">Facturacion</a></li>
                     <li><a href="./Producto.php">Producto</a></li>
                 </ul>
+                <label for="btn-menu">✖️</label>
             </nav>
+            
             </div>          
         <!--Fin Menu desplegable-->
 
