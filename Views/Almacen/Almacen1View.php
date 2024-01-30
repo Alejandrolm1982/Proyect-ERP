@@ -23,5 +23,31 @@
             </nav>
             </div>          
         <!--Fin Menu desplegable-->
+
+
+        <select id="almacen" name="almacen" class="select">
+        <option ></option>
+        <option value="almacen">Almacen</option>
+    </select>
+    <button id="aniadir" class="boton" onclick="toggleFormulario()">Añadir</button>
+    <div id="container2" style="display: none;">
+        <!-- FORMULARIO DE AÑADIR -->
+        <form id="formularioAgregar3" class="formulario">
+
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" name="fecha" class="formulario-campo" placeholder="Fecha" >
+            
+            <label for="capacidad">Capacidad:</label>
+            <input type="text" id="capacidad" name="capacidad" class="formulario-campo" placeholder="capacidad" required>
+
+            <label for="ubicacion">Ubicacion:</label>
+            <input type="text" id="ubicacion" name="ubicacion" class="formulario-campo" placeholder="ubicacion" required>
+
+            <input type="submit" id="confirmar3" name="confirmar3" value="confirmar" class="formulario-boton boton">
+        </form>
+    </div>
+    <div id="container3"></div>
+    <div id="container1"></div><!--AQUI TIENE QUE CARGARSE LA PRIMERA CONSULTA DE LA TABLA cliente/proveedor-->
+
 </body>
 </html>

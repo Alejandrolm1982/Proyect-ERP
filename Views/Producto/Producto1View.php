@@ -6,7 +6,7 @@
     <title>Productos</title>
 </head>
 <body>
-<!--Menu desplegable
+<!--Menu desplegable-->
 <label for="btn-menu" class="menuEstetica">Menu</label>
             <input type="checkbox" id="btn-menu">
             <div class="container-menu">
@@ -16,16 +16,12 @@
                     <li><a href="./Usuario.php">Usuario</a></li>
                     <li><a href="./Clienteproveedor.php">Cliente<br>Proveedor</a></li>
                     <li><a href="./Almacen.php">Almacen</a></li>
-                    <li><a href="./Facturacion.php">Facturacion</a></li>
+                    <li><a href="./Producto.php">Producto</a></li>
                 </ul>
                 <label for="btn-menu">✖️</label>
             </nav>
-            </div>  
-            
-            
-
-
-        Fin Menu desplegable-->
+            </div>          
+        <!--Fin Menu desplegable-->
 
 
     <select id="producto" name="producto" class="select">
