@@ -156,6 +156,9 @@ window.addEventListener('load', function(){
   let boton12;
   let controlador13;
   let div13;
+  let boton13;
+  let controlador14;
+  let div14;
 
 /* ---------------------------------- INICIO - (submit) Seleccionar 1 */
 // Paso 1: Obtener referencias:
@@ -316,6 +319,24 @@ if (selectFacturacion) {
   }
   /* ---------------------------------- FIN - (submit) Insertar 4 */
 
+  /* ---------------------------------- INICIO - (submit) Insertar 5 */
+  // Paso 1: Obtener referencias:
+  const formularioAgregarUsuario = document.getElementById("formularioAgregarUsuario");
+  // Paso 2 - Asociación del elemento al evento (submit) y llamada a la función
+  if(formularioAgregarUsuario)
+  {
+    // Referencia de los elementos
+    boton13 = document.getElementById("confirmarUsuario");
+    controlador14 = "Controllers/Insert1Controller.php";
+    div14 = document.getElementById("container3");
+    // Evento y llamada a la función
+    formularioAgregarUsuario.addEventListener("submit", function(event){
+      event.preventDefault();
+      insertarDatos1(formularioAgregarUsuario,boton13,controlador14,div14);
+    });
+  }
+  /* ---------------------------------- FIN - (submit) Insertar 5 */
+
 
   /* ---------------------------------- INICIO - (submit) edicion 1 */
   // Paso 1: Obtener referencias:
@@ -462,8 +483,33 @@ if (selectFacturacion) {
   }
   /* ---------------------------------- FIN - (submit) eliminacion 4 */  
 
+  /*Login*/
 
+  document.addEventListener('DOMContentLoaded', function () {
+    // Tu código aquí
+    document.getElementById('loginForm').addEventListener('submit', function (event) {
+      event.preventDefault();
 
+      const formData = new FormData(this);
+    
+      fetch('controllers/LoginController1.php', {
+          method: 'POST',
+          body: formData
+      })
+      .then(response => response.text())
+      .then(responseText => console.log(responseText))
+      .then(data => {
+          if (data.success) {
+              // Redirigir a otra página si los datos coinciden
+              window.location.href = 'Home.php';
+          } else {
+              // Mostrar mensaje de error
+              alert(data.message);
+          }
+      })
+      .catch(error => console.error('Error:', error));
+    });
+});
 
 });
 
