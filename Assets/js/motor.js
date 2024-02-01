@@ -450,6 +450,7 @@ if (selectFacturacion) {
     formEliminacion1.addEventListener("submit", function(event){
       event.preventDefault();
       insertarDatos1(formEliminacion1,boton3,controlador4,div4);
+      window.location.href = "clienteproveedor.php";
     });
   }
   /* ---------------------------------- FIN - (submit) eliminacion 1 */  
@@ -468,6 +469,7 @@ if (selectFacturacion) {
     formEliminacion2.addEventListener("submit", function(event){
       event.preventDefault();
       insertarDatos1(formEliminacion2,boton6,controlador7,div7);
+      window.location.href = "producto.php";
     });
   }
   /* ---------------------------------- FIN - (submit) eliminacion 2 */  
@@ -486,6 +488,7 @@ if (selectFacturacion) {
     formEliminacion3.addEventListener("submit", function(event){
       event.preventDefault();
       insertarDatos1(formEliminacion3,boton9,controlador10,div10);
+      window.location.href = "almacen.php";
     });
   }
   /* ---------------------------------- FIN - (submit) eliminacion 3 */  
@@ -505,6 +508,7 @@ if (selectFacturacion) {
     formEliminacion4.addEventListener("submit", function(event){
       event.preventDefault();
       insertarDatos1(formEliminacion4,boton12,controlador13,div13);
+      window.location.href = "facturacion.php";
     });
   }
   /* ---------------------------------- FIN - (submit) eliminacion 4 */  

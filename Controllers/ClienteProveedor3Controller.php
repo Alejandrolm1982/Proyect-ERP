@@ -25,5 +25,4 @@ $data = $oData->setDataPreparedStatements1($sql, $nombre, $direccion, $telefono,
 
 // Devolución del resultado obtenido
 echo $data;
-
 ?>

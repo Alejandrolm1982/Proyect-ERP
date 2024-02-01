@@ -21,5 +21,4 @@ $data = $oData->setDataPreparedStatements1($sql, $nombre, $stock, $precio, $desc
 
 // Devolución del resultado obtenido
 echo $data;
-
 ?>
