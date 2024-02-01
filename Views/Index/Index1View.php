@@ -1,3 +1,13 @@
+<?php
+// views/formulario.php
+include 'controllers/LoginController1.php';
+session_start();
+$userController = new UserController();
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $userController->procesarFormulario();
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -10,15 +20,17 @@
 <body>
     <div class="main">
         <div class="container a-container" id="a-container">
-        <form id="loginForm" class="form a-form" method="POST">
-    <h2 class="form_title title">Bienvenido</h2>
-    <div class="form__icons"></div>
-    <span class="form__span">Usa las credenciales proporcionadas</span>
+        <form id="loginForm" class="form a-form" method="POST" action="procesarformulario1.php">
+            <h2 class="form_title title">Bienvenido</h2>
+            <div class="form__icons"></div>
+            <span class="form__span">Usa las credenciales proporcionadas</span>
 
-    <input class="form__input" type="text" placeholder="Name" name="username" required>
-    <input class="form__input" type="password" placeholder="Password" name="password" required>
-    <button type="submit" class="form__button button submit">LOG IN</button>
-</form>
+            <input type="hidden" name="action" value="login">
+
+            <input class="form__input" type="text" placeholder="Name" name="username" required>
+            <input class="form__input" type="password" placeholder="Password" name="password" required>
+            <button type="submit" class="form__button button submit" value="enviar">LOG IN</button>
+        </form>
 
         </div>
     </div>

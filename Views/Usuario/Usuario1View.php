@@ -36,5 +36,9 @@
                 </ul>
                 <button type="button" id="CambioContraseña" class="button1">Cambiar Contraseña</button>
     </section>
+    <section>
+        <button type="button" id="registrar" class="boton"><a href="./Insert.php">Registrar</a></button>
+    </section>
+
 </body>
 </html>
