@@ -378,6 +378,7 @@ if (selectFacturacion) {
     formEdicion1.addEventListener("submit", function(event){
       event.preventDefault();
       insertarDatos1(formEdicion1,boton2,controlador3,div3);
+      window.location.href = "clienteproveedor.php";
     });
   }
   /* ---------------------------------- FIN - (submit) edicion 1 */  
@@ -396,6 +397,7 @@ if (selectFacturacion) {
     formEdicion2.addEventListener("submit", function(event){
       event.preventDefault();
       insertarDatos1(formEdicion2,boton5,controlador6,div6);
+      window.location.href = "producto.php";
     });
   }
   /* ---------------------------------- FIN - (submit) edicion 2 */ 
@@ -413,6 +415,7 @@ if (selectFacturacion) {
     formEdicion3.addEventListener("submit", function(event){
       event.preventDefault();
       insertarDatos1(formEdicion3,boton8,controlador9,div9);
+      window.location.href = "almacen.php";
     });
   }
   /* ---------------------------------- FIN - (submit) edicion 3 */ 
@@ -431,6 +434,7 @@ if (selectFacturacion) {
     formEdicion4.addEventListener("submit", function(event){
       event.preventDefault();
       insertarDatos1(formEdicion4,boton11,controlador12,div12);
+      window.location.href = "facturacion.php";
     });
   }
   /* ---------------------------------- FIN - (submit) edicion 4 */ 
