@@ -25,6 +25,9 @@
     // Devolución del resultado obtenido
     echo $data;
 
+    header("Location: ClienteProveedor1Controller.php");
+    exit();
+
     // Documentación en:
     // https://www.php.net/manual/en/mysqli.quickstart.prepared-statements.php#mysqli.quickstart.prepared-statements
 ?>

@@ -22,6 +22,10 @@
     // Devolución del resultado obtenido
     echo $data;
 
+    header("Location: Producto1Controller.php");
+    exit();
+
+
     // Documentación en:
     // https://www.php.net/manual/en/mysqli.quickstart.prepared-statements.php#mysqli.quickstart.prepared-statements
 ?>

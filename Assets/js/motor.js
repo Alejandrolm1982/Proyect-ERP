@@ -160,6 +160,7 @@ window.addEventListener('load', function(){
   let controlador14;
   let div14;
 
+
 /* ---------------------------------- INICIO - (submit) Seleccionar 1 */
 // Paso 1: Obtener referencias:
 const selectClienteProveedor = document.getElementById("cliente/proveedor");
@@ -272,17 +273,6 @@ if (selectFacturacion) {
 
 
   /* ---------------------------------- INICIO - (submit) Insertar 1 */
-
-  function recargarConsultaClienteProveedor1() {
-    // Obtener referencias y valores necesarios
-    const selectClienteProveedor = document.getElementById("cliente/proveedor");
-    const valorSeleccionado = selectClienteProveedor.value;
-    const controlador1 = "Controllers/ClienteProveedor1Controller.php";
-    const div1 = document.getElementById("container1");
-
-    // Llama a la función pasando el valor seleccionado
-    seleccionarDatos1(valorSeleccionado, controlador1, div1);
-  }
   // Paso 1: Obtener referencias:
   const formInsercion1 = document.getElementById("formularioAgregar");
   // Paso 2 - Asociación del elemento al evento (submit) y llamada a la función
@@ -291,12 +281,11 @@ if (selectFacturacion) {
     // Referencia de los elementos
     boton1 = document.getElementById("confirmar");
     controlador2 = "Controllers/ClienteProveedor2Controller.php";
-    div2 = document.getElementById("container3");
+    div2 = document.getElementById("container1");
     // Evento y llamada a la función
     formInsercion1.addEventListener("submit", function(event){
       event.preventDefault();
       insertarDatos1(formInsercion1,boton1,controlador2,div2);
-      recargarConsultaClienteProveedor1();
     });
   }
   /* ---------------------------------- FIN - (submit) Insertar 1 */
@@ -310,7 +299,7 @@ if (selectFacturacion) {
     // Referencia de los elementos
     boton4 = document.getElementById("confirmar2");
     controlador5 = "Controllers/Producto2Controller.php";
-    div5 = document.getElementById("container3");
+    div5 = document.getElementById("container1");
     // Evento y llamada a la función
     formInsercion2.addEventListener("submit", function(event){
       event.preventDefault();
@@ -329,7 +318,7 @@ if (selectFacturacion) {
     // Referencia de los elementos
     boton7 = document.getElementById("confirmar3");
     controlador8 = "Controllers/Almacen2Controller.php";
-    div8 = document.getElementById("container3");
+    div8 = document.getElementById("container1");
     // Evento y llamada a la función
     formInsercion3.addEventListener("submit", function(event){
       event.preventDefault();
@@ -347,7 +336,7 @@ if (selectFacturacion) {
     // Referencia de los elementos
     boton10 = document.getElementById("confirmar4");
     controlador11 = "Controllers/Facturacion2Controller.php";
-    div11 = document.getElementById("container3");
+    div11 = document.getElementById("container1");
     // Evento y llamada a la función
     formInsercion4.addEventListener("submit", function(event){
       event.preventDefault();
@@ -365,7 +354,7 @@ if (selectFacturacion) {
     // Referencia de los elementos
     boton13 = document.getElementById("confirmarUsuario");
     controlador14 = "Controllers/Insert1Controller.php";
-    div14 = document.getElementById("container3");
+    div14 = document.getElementById("container1");
     // Evento y llamada a la función
     formularioAgregarUsuario.addEventListener("submit", function(event){
       event.preventDefault();
