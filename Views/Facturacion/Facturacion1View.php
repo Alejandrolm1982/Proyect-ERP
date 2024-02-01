@@ -8,6 +8,7 @@
 <body>
 <!--Menu desplegable-->
 <label for="btn-menu" class="menuEstetica">Menu</label>
+
             <input type="checkbox" id="btn-menu">
             <div class="container-menu">
             <nav class="vertical-nav cont-menu">
@@ -23,8 +24,10 @@
             </div>          
         <!--Fin Menu desplegable-->
 
+
+
 <select id="facturacion" name="facturacion" class="select">
-    <option ></option>
+    <option value=""></option>
     <option value="facturacion">Facturación</option>
 </select>
 <button id="aniadir" class="boton" onclick="toggleFormulario()">Añadir</button>
