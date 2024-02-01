@@ -25,7 +25,7 @@
 
 
         <select id="almacen" name="almacen" class="select">
-        <option ></option>
+        <option value=""></option>
         <option value="almacen">Almacen</option>
     </select>
     <button id="aniadir" class="boton" onclick="toggleFormulario()">Añadir</button>

@@ -197,6 +197,12 @@ if (selectProducto) {
   controlador1 = "Controllers/Producto1Controller.php";
   div1 = document.getElementById("container1");
 
+  // Obtén el valor seleccionado del <select>
+  const valorSeleccionado = selectProducto.value;
+
+  // Llama a la función pasando el valor seleccionado
+  seleccionarDatos2(valorSeleccionado, controlador1, div1);
+
   selectProducto.addEventListener("change", function(event) {
     event.preventDefault();
 
@@ -218,6 +224,12 @@ if (selectAlmacen) {
   controlador1 = "Controllers/Almacen1Controller.php";
   div1 = document.getElementById("container1");
 
+  // Obtén el valor seleccionado del <select>
+  const valorSeleccionado = selectAlmacen.value;
+
+  // Llama a la función pasando el valor seleccionado
+  seleccionarDatos3(valorSeleccionado, controlador1, div1);
+
   selectAlmacen.addEventListener("change", function(event) {
     event.preventDefault();
 
@@ -238,6 +250,12 @@ if (selectFacturacion) {
   // Referencia de los elementos
   controlador1 = "Controllers/Facturacion1Controller.php";
   div1 = document.getElementById("container1");
+
+      // Obtén el valor seleccionado del <select>
+      const valorSeleccionado = selectFacturacion.value;
+
+      // Llama a la función pasando el valor seleccionado
+      seleccionarDatos4(valorSeleccionado, controlador1, div1);
 
   selectFacturacion.addEventListener("change", function(event) {
     event.preventDefault();

@@ -22,7 +22,12 @@ $selectTipo = empty($_POST['producto']) ? '' : $_POST['producto'];
 $sql = "";
 
 // Construye la consulta SQL según el tipo seleccionado
-if ($selectTipo == 'producto') 
+if ($selectTipo == '') 
+{
+    // Consulta por defecto que carga toda la tabla
+    $sql = "SELECT * FROM producto";
+} 
+elseif ($selectTipo == 'producto') 
 {
     $sql = "SELECT * FROM producto";
 } 
