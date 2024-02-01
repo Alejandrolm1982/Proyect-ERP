@@ -254,6 +254,17 @@ if (selectFacturacion) {
 
 
   /* ---------------------------------- INICIO - (submit) Insertar 1 */
+
+  function recargarConsultaClienteProveedor1() {
+    // Obtener referencias y valores necesarios
+    const selectClienteProveedor = document.getElementById("cliente/proveedor");
+    const valorSeleccionado = selectClienteProveedor.value;
+    const controlador1 = "Controllers/ClienteProveedor1Controller.php";
+    const div1 = document.getElementById("container1");
+
+    // Llama a la función pasando el valor seleccionado
+    seleccionarDatos1(valorSeleccionado, controlador1, div1);
+  }
   // Paso 1: Obtener referencias:
   const formInsercion1 = document.getElementById("formularioAgregar");
   // Paso 2 - Asociación del elemento al evento (submit) y llamada a la función
@@ -267,6 +278,7 @@ if (selectFacturacion) {
     formInsercion1.addEventListener("submit", function(event){
       event.preventDefault();
       insertarDatos1(formInsercion1,boton1,controlador2,div2);
+      recargarConsultaClienteProveedor1();
     });
   }
   /* ---------------------------------- FIN - (submit) Insertar 1 */
