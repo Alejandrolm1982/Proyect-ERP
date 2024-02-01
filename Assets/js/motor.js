@@ -166,6 +166,13 @@ if (selectClienteProveedor) {
   controlador1 = "Controllers/ClienteProveedor1Controller.php";
   div1 = document.getElementById("container1");
 
+  // Obtén el valor seleccionado del <select>
+  const valorSeleccionado = selectClienteProveedor.value;
+
+  // Llama a la función pasando el valor seleccionado
+  seleccionarDatos1(valorSeleccionado, controlador1, div1);
+
+  // Asociación del elemento al evento (change) y llamada a la función
   selectClienteProveedor.addEventListener("change", function(event) {
     event.preventDefault();
 
@@ -174,7 +181,7 @@ if (selectClienteProveedor) {
 
     // Llama a la función pasando el valor seleccionado
     seleccionarDatos1(valorSeleccionado, controlador1, div1);
-  });
+});
 }
 /* ---------------------------------- FIN - (submit) Seleccionar 1 */
 

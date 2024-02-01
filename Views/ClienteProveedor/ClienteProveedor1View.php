@@ -26,8 +26,7 @@
 
     <label>Selecciona Cliente/Proveedor:</label>
     <select id="cliente/proveedor" name="cliente/proveedor" class="select">
-        <option ></option>
-        <option value="todos">Todos</option>
+        <option value=""></option>
         <option value="cliente">Cliente</option>
         <option value="proveedor">Proveedor</option>
     </select>
