@@ -196,6 +196,15 @@ window.addEventListener('load', function(){
   let boton13;
   let controlador14;
   let div14;
+  let boton14;
+  let controlador15;
+  let div15;
+  let boton15;
+  let controlador16;
+  let div16;
+  let boton16;
+  let controlador17;
+  let div17;
 
 
 /* ---------------------------------- INICIO - (submit) Seleccionar 1 */
@@ -571,6 +580,57 @@ if (selectFacturacion) {
     });
   }
   /* ---------------------------------- FIN - (submit) busqueda 1 */
+  /* ---------------------------------- INICIO - (submit) busqueda 2 */
+  // Paso 1: Obtener referencias:
+  const formularioBusqueda2 = document.getElementById("formularioBusqueda2");
+  // Paso 2 - Asociación del elemento al evento (submit) y llamada a la función
+  if(formularioBusqueda2)
+  {
+    // Referencia de los elementos
+    boton14 = document.getElementById("confirmarBusqueda2");
+    controlador15 = "Controllers/Almacen6Controller.php";
+    div15 = document.getElementById("container1");
+    // Evento y llamada a la función
+    formularioBusqueda2.addEventListener("submit", function(event){
+      event.preventDefault();
+      seleccionarDatos5(formularioBusqueda2,boton14,controlador15,div15);
+    });
+  }
+  /* ---------------------------------- FIN - (submit) busqueda 2 */
+  /* ---------------------------------- INICIO - (submit) busqueda 3 */
+  // Paso 1: Obtener referencias:
+  const formularioBusqueda3 = document.getElementById("formularioBusqueda3");
+  // Paso 2 - Asociación del elemento al evento (submit) y llamada a la función
+  if(formularioBusqueda3)
+  {
+    // Referencia de los elementos
+    boton15 = document.getElementById("confirmarBusqueda3");
+    controlador16 = "Controllers/Facturacion6Controller.php";
+    div16 = document.getElementById("container1");
+    // Evento y llamada a la función
+    formularioBusqueda3.addEventListener("submit", function(event){
+      event.preventDefault();
+      seleccionarDatos5(formularioBusqueda3,boton15,controlador16,div16);
+    });
+  }
+  /* ---------------------------------- FIN - (submit) busqueda 3 */
+  /* ---------------------------------- INICIO - (submit) busqueda 4 */
+  // Paso 1: Obtener referencias:
+  const formularioBusqueda4 = document.getElementById("formularioBusqueda4");
+  // Paso 2 - Asociación del elemento al evento (submit) y llamada a la función
+  if(formularioBusqueda4)
+  {
+    // Referencia de los elementos
+    boton16 = document.getElementById("confirmarBusqueda4");
+    controlador17 = "Controllers/Producto6Controller.php";
+    div17 = document.getElementById("container1");
+    // Evento y llamada a la función
+    formularioBusqueda4.addEventListener("submit", function(event){
+      event.preventDefault();
+      seleccionarDatos5(formularioBusqueda4,boton16,controlador17,div17);
+    });
+  }
+  /* ---------------------------------- FIN - (submit) busqueda 4 */
 
   /*Login*/
 

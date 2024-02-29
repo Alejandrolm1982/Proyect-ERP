@@ -4,24 +4,24 @@
         // Llamada a la conexión
         require_once '../Db/Con1Db.php';
         // Llamada al modelo
-        require_once '../Models/ClienteProveedor6Model.php';
+        require_once '../Models/Producto6Model.php';
     } 
     else if (file_exists("Db/Con1Db.php")) 
     {
         // Llamada a la conexión
         require_once 'Db/Con1Db.php';
         // Llamada al modelo
-        require_once 'Models/ClienteProveedor6Model.php';
+        require_once 'Models/Producto6Model.php';
     }
 
     // Tratamiento de los imput text
-    $textoBusqueda = empty($_POST['textoBusqueda']) ? '' : $_POST['textoBusqueda'];
+    $textoBusqueda4 = empty($_POST['textoBusqueda4']) ? '' : $_POST['textoBusqueda4'];
 
     // Instanciación de un objeto
     $oData = new Datos;
 
     // Llamada al método
-    $sql = "select * from clienteproveedor where nombre like '%$textoBusqueda%' or direccion like '%$textoBusqueda%' or telefono like '%$textoBusqueda%' or correo like '%$textoBusqueda%' or tipo like '%$textoBusqueda%' order by nombre, direccion, telefono, correo, tipo";
+    $sql = "select * from producto where nombre like '%$textoBusqueda4%' or stock like '%$textoBusqueda4%' or precio like '%$textoBusqueda4%' or descripcion like '%$textoBusqueda4%' order by nombre, stock, precio, descripcion";
 
     $data = $oData->getData1($sql);
 
@@ -40,21 +40,19 @@
             echo "
                 <div class='bloque0 negrita'>
                     <div class='bloque1'>NOMBRE</div>
-                    <div class='bloque1'>DIRECCION</div>
-                    <div class='bloque1'>TELÉFONO</div>
-                    <div class='bloque1'>CORREO</div>
-                    <div class='bloque1'>TIPO</div>
+                    <div class='bloque1'>STOCK</div>
+                    <div class='bloque1'>PRECIO</div>
+                    <div class='bloque1'>DESCRIPCION</div>
                 </div>
             ";
             foreach ($data as $row) {
                 echo "
                     <div class='bloque0'>
-                        <a class='bloque0' href='edicionEliminacionClienteProveedor.php?id_cliente_proveedor=$row->id_cliente_proveedor'> 
+                        <a class='bloque0' href='edicionEliminacionProducto.php?id_producto=$row->id_producto'> 
                             <div class='bloque1'>$row->nombre</div>
-                            <div class='bloque1'>$row->direccion</div>
-                            <div class='bloque1'>$row->telefono</div>
-                            <div class='bloque1'>$row->correo</div>
-                            <div class='bloque1'>$row->tipo</div>
+                            <div class='bloque1'>$row->stock</div>
+                            <div class='bloque1'>$row->precio</div>
+                            <div class='bloque1'>$row->descripcion</div>
                         </a>      
                     </div>
                     
