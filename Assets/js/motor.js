@@ -63,6 +63,35 @@ function ajaxPost2(form1, controlador1, div1)
 }
 /* FIN - ajaxPost1 - Devuelve el resultado a un DIV (POST) */
 
+/* INICIO - ajaxPost3 - Devuelve el resultado a un DIV (POST) */
+function ajaxPost3(form1, controlador1, div1)
+{
+
+  // 1.- Creación del objeto XMLHttpRequest (Ajax1)
+  const Ajax1 = new XMLHttpRequest();
+
+  // 2.- Enlace del formulario a un objeto FormData (FormData1)
+  const FormData1 = new FormData( form1 );
+  
+  // 5.-Éxito en el envío
+  Ajax1.addEventListener("load", function(event) {
+    document.getElementById(div1.id).innerHTML = this.responseText;
+  });
+  
+  // 5.-Error en el envío
+  Ajax1.addEventListener("error", function( event ) {
+    alert( 'Error: no se ha enviado la informacion' );
+  } );
+  
+  // 3.-Configuración del envío del formulario a través del FormData
+  Ajax1.open("POST", controlador1);
+  
+  // 4.-Envío del formulario a través del FormData
+  Ajax1.send( FormData1 );
+  
+}
+/* FIN - ajaxPost3 - Devuelve el resultado a un DIV (POST) */
+
 
 
 function insertarDatos1(form1, boton1, controlador1, div1)
@@ -113,6 +142,14 @@ function seleccionarDatos4(valorSeleccionado, controlador1, div1) {
 
   // Llamada a la función ajaxPost1 con el objeto FormData
   ajaxPost1(formData, controlador1, div1);
+}
+
+function seleccionarDatos5(form1, boton1, controlador1, div1)
+{    
+    deshabilitarControl1(boton1);
+    ajaxPost3(form1,controlador1,div1);
+    habilitarControl1(boton1);
+    form1.reset();
 }
 
 
@@ -516,6 +553,24 @@ if (selectFacturacion) {
     });
   }
   /* ---------------------------------- FIN - (submit) eliminacion 4 */  
+
+  /* ---------------------------------- INICIO - (submit) busqueda 1 */
+  // Paso 1: Obtener referencias:
+  const formularioBusqueda1 = document.getElementById("formularioBusqueda");
+  // Paso 2 - Asociación del elemento al evento (submit) y llamada a la función
+  if(formularioBusqueda1)
+  {
+    // Referencia de los elementos
+    boton13 = document.getElementById("confirmarBusqueda");
+    controlador14 = "Controllers/ClienteProveedor6Controller.php";
+    div14 = document.getElementById("container1");
+    // Evento y llamada a la función
+    formularioBusqueda1.addEventListener("submit", function(event){
+      event.preventDefault();
+      seleccionarDatos5(formularioBusqueda1,boton13,controlador14,div14);
+    });
+  }
+  /* ---------------------------------- FIN - (submit) busqueda 1 */
 
   /*Login*/
 
