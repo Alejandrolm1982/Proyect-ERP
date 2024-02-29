@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
     <script src="Assets/js/motor.js"></script>
 </head>
-<body>
+<body class="body">
     <div class="main">
         <div class="container a-container" id="a-container">
         <form id="loginForm" class="form a-form" method="POST" action="procesarformulario1.php">

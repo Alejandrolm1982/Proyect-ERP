@@ -242,3 +242,10 @@ body {
 .is-gx {
     animation: is-gx var(--transition);
 }
+
+.body {
+    background-image: url('../img/fondo-login.jpg');
+    background-size: cover; /* Ajusta la imagen para cubrir todo el área */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+  }

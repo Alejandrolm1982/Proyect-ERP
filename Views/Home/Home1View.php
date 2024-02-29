@@ -14,7 +14,7 @@
             <img src="Assets/img/mondongo1.jpg" alt="Mondongo Image">
         </button>
     </a>
-    <h4>Bienvenido, "Usuario"</h4>
+    <h4>Bienvenido</h4>
     </section>
 
     <article>
