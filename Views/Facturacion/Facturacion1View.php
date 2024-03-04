@@ -62,6 +62,10 @@
     <input type="submit" id="confirmar4" name="confirmar4" value="confirmar" class="formulario-boton boton">
 </form>
 </div>
+<form id="formularioBusqueda3" class="formulario">
+        <input type="text" id="textoBusqueda3" name="textoBusqueda3">
+        <input type="submit" id="confirmarBusqueda3" name="confirmarBusqueda3" value="Buscar" class="formulario-boton boton">
+    </form>
 <div id="container3"></div>
 <div id="container1"></div><!--AQUI TIENE QUE CARGARSE LA PRIMERA CONSULTA DE LA TABLA cliente/proveedor-->
 
