@@ -39,46 +39,24 @@ else {
 
 // Llamada al método
 $sql2 = "INSERT INTO documento (fecha_emision, num_pedido, vencimiento, nombre, direccion, nif) VALUES (?, ?, ?, ?, ?, ?)";
+
 // Ejecutar la inserción en la tabla documento
 $id_documento = $oData->setDataPreparedStatements2($sql2, $fecha, $num_pedido, $vencimiento, $nombre, $direccion, $nif);
 
-// Verificar si la inserción en documento fue exitosa
-if ($id_documento) {
-    // Obtener el ID del documento recién insertado
-    $id_documento_insertado = $oData->getLastInsertId();
+echo "ID del documento insertado: $id_documento"; // Puedes imprimir el id_documento generado si lo necesitas para depurar o verificar
 
-    // Verificar la existencia del id_documento antes de la inserción en facturacion
-    $sql_check = "SELECT id_documento FROM documento WHERE id_documento = ?";
-    $data_check = $oData->getData1($sql_check, array($id_documento_insertado));
-
-    if (!empty($data_check)) {
-        // Llamada al método
-        $sql3 = "INSERT INTO facturacion (id_cliente_proveedor, id_usuario, tipoTransaccion, fecha, id_documento) VALUES (?, ?, ?, ?, ?)";
-        // Ejecutar la inserción en la tabla facturacion
-        $data = $oData->setDataPreparedStatements1($sql3, $id_cliente_proveedor, $id_usuario, $tipoTransaccion, $fecha, $id_documento_insertado);
-
-        // Verificar si la inserción en facturacion fue exitosa
-        if ($data) {
-            // Si todo fue exitoso, redirigir a la página Facturacion1Controller.php
-            header("Location: Facturacion1Controller.php");
-            exit();
-        } else {
-            // Manejar el caso donde la inserción en facturacion falló
-            echo "Error: No se pudo insertar en la tabla facturacion.";
-        }
-    } else {
-        // Manejar el caso donde el id_documento no existe en la tabla documento
-        echo "Error: El id_documento no existe en la tabla documento.";
-    }
+// Verifica si se insertó correctamente el documento antes de continuar
+if ($id_documento !== false) {
+    // Ahora puedes utilizar $id_documento en tu inserción en la tabla facturacion
+    $sql3 = "INSERT INTO facturacion (id_cliente_proveedor, id_usuario, tipoTransaccion, fecha, id_documento) VALUES (?, ?, ?, ?, ?)";
+    $data = $oData->setDataPreparedStatements1($sql3, $id_cliente_proveedor, $id_usuario, $tipoTransaccion, $fecha, $id_documento);
+    echo $data;
 } else {
-    // Manejar el caso donde la inserción en documento falló
-    echo "Error: No se pudo insertar en la tabla documento.";
+    echo "Error al insertar en la tabla documento.";
 }
 
-// Documentación en:
-// https://www.php.net/manual/en/mysqli.quickstart.prepared-statements.php#mysqli.quickstart.prepared-statements
-
 ?>
+
 
 
 

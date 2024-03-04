@@ -21,7 +21,7 @@
     $oData = new Datos;
 
     // Llamada al método
-    $sql = "select * from facturacion where tipoTransaccion like '%$textoBusqueda3%' or albaran like '%$textoBusqueda3%' or fecha like '%$textoBusqueda3%' or factura like '%$textoBusqueda3%' order by tipoTransaccion, albaran, fecha, factura";
+    $sql = "select * from facturacion where id_usuario like '%$textoBusqueda3%' or id_cliente_proveedor like '%$textoBusqueda3%' or tipoTransaccion like '%$textoBusqueda3%' or fecha like '%$textoBusqueda3%' or id_documento like '%$textoBusqueda3%' ";
 
     $data = $oData->getData1($sql);
 
@@ -39,20 +39,22 @@
         } else {
             echo "
                 <div class='bloque0 negrita'>
-                    <div class='bloque1'>tipoTransaccion</div>
-                    <div class='bloque1'>albaran</div>
-                    <div class='bloque1'>fecha</div>
-                    <div class='bloque1'>factura</div>
+                    <div class='bloque1'>ID Usuario</div>                
+                    <div class='bloque1'>ID Cliente/Proveedor</div>
+                    <div class='bloque1'>TIPO DE TRANSACCIÓN</div>
+                    <div class='bloque1'>FECHA</div>
+                    <div class='bloque1'>ID Factura/albaran</div>
                 </div>
             ";
             foreach ($data as $row) {
                 echo "
                     <div class='bloque0'>
                         <a class='bloque0' href='edicionEliminacionFacturacion.php?id_facturacion=$row->id_facturacion'> 
+                            <div class='bloque1'>$row->id_usuario</div>
+                            <div class='bloque1'>$row->id_cliente_proveedor</div>
                             <div class='bloque1'>$row->tipoTransaccion</div>
-                            <div class='bloque1'>$row->albaran</div>
                             <div class='bloque1'>$row->fecha</div>
-                            <div class='bloque1'>$row->factura</div>
+                            <div class='bloque1'>$row->id_documento</div>
                         </a>      
                     </div>
                     

@@ -108,37 +108,31 @@ class Datos
         $this->openConnection(); // Open connection
         
         $stmt = $this->mysqli->prepare($sql);
-    
+
         $stmt->bind_param("ssssss", $par1, $par2, $par3, $par4, $par5, $par6);
-    
-        if(!$stmt->execute())
+
+        $result = "";
+
+        if($stmt->execute())
         {
-            $result = "La operación no se ha podido realizar. Detalles del error: " . $stmt->error;
-            // También puedes agregar la línea siguiente para ver el error de la consulta preparada
-            // echo "Detalle del error en la consulta preparada: " . $stmt->error;
+            // Obtener el ID del último registro insertado
+            $sql_get_id = "SELECT LAST_INSERT_ID() AS id_documento";
+            $result_id = $this->mysqli->query($sql_get_id);
+            $row = $result_id->fetch_assoc();
+            $id_documento = $row['id_documento'];
+            
+            $result = "Operación realizada con éxito. ID del documento insertado: " . $id_documento;
         }
         else
         {
-            $result = "Operación realizada con éxito.";
+            $result = "La operación no se ha podido realizar. Detalles del error: " . $stmt->error;
         }
-    
+
         $stmt->close();
         
         $this->closeConnection(); // Close connection
         
-        return $result;
-    }
-
-    // Método para obtener el ID del último registro insertado
-    public function getLastInsertId()
-    {
-        $this->openConnection(); // Open connection
-        
-        $lastId = $this->mysqli->insert_id;
-        
-        $this->closeConnection(); // Close connection
-        
-        return $lastId;
+        return $id_documento;
     }
 }
 
