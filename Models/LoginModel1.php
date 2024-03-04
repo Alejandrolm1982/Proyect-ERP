@@ -15,7 +15,7 @@ class UserModel {
 
     public function verificarDatos($username, $password) {
         // Consulta SQL (reemplaza con tu consulta real)
-        $sql = "SELECT * FROM usuario WHERE nombre = ? AND contraseña = ?";
+        $sql = "SELECT id_usuario FROM usuario WHERE nombre = ? AND contraseña = ?";
 
         // Preparar la consulta
         if ($stmt = $this->conn->prepare($sql)) {
@@ -30,6 +30,13 @@ class UserModel {
                 // Verificar el número de filas afectadas
                 if ($result->num_rows > 0) {
                     // Los datos coinciden
+                    // Obtener el id_usuario
+                    $row = $result->fetch_assoc();
+                    $id_usuario = $row['id_usuario'];
+                    
+                    // Guardar el id_usuario en la variable de sesión
+                    $_SESSION['id_usuario'] = $id_usuario;
+
                     // Redirige al usuario a home.php
                     header("Location: Home.php");
                     exit();

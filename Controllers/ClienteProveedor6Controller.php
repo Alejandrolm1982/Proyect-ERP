@@ -28,7 +28,6 @@
 
     // Verifica que $sql no esté vacío antes de usarlo en getData1
     if (!empty($sql)) {
-        $data = $oData->getData1($sql);
 
         if (empty($data)) {
             echo "

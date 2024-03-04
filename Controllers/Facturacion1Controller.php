@@ -45,21 +45,22 @@ if (!empty($sql)) {
     } else {
         echo "
             <div class='bloque0 negrita'>
+                <div class='bloque1'>ID Usuario</div>
+                <div class='bloque1'>ID Cliente/Proveedor</div>
                 <div class='bloque1'>TIPO DE TRANSACCIÓN</div>
                 <div class='bloque1'>FECHA</div>
-                <div class='bloque1'>FACTURA</div>
-                <div class='bloque1'>ALBARÁN</div>
+                <div class='bloque1'>ID Factura/albaran</div>
             </div>
         ";
         foreach ($data as $row) {
             echo "
                 <div class='bloque0'>
                     <a class='bloque0' href='edicionEliminacionFacturacion.php?id_facturacion=$row->id_facturacion'> 
+                        <div class='bloque1'>$row->id_usuario</div>
+                        <div class='bloque1'>$row->id_cliente_proveedor</div>
                         <div class='bloque1'>$row->tipoTransaccion</div>
                         <div class='bloque1'>$row->fecha</div>
-                        <div class='bloque1'>$row->factura</div>
-                        <div class='bloque1'>$row->albaran</div>
-                        
+                        <div class='bloque1'>$row->id_documento</div>                       
                     </a>      
                 </div>
                 

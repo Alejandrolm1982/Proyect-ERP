@@ -25,8 +25,6 @@
         {
             $tipoTransaccion = $row->tipoTransaccion;
             $fecha = $row->fecha;
-            $factura = $row->factura;
-            $albaran = $row->albaran;
         }
     }
 

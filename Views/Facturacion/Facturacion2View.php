@@ -21,12 +21,6 @@
             <label for="fecha">Fecha:</label>
             <input type="date" id="fecha" name="fecha" class="formulario-campo" placeholder="Fecha" value="<?php echo $fecha; ?>">
 
-            <label for="factura">factura:</label>
-            <input type="text" id="factura" name="factura" class="formulario-campo" placeholder="factura" value="<?php echo $factura; ?>" required>
-
-            <label for="albaran">Albarán:</label>
-            <input type="text" id="albaran" name="albaran" class="formulario-campo" placeholder="albaran" value="<?php echo $albaran; ?>" required>
-
             <input type="submit" id="confirmarEdicion4" name="confirmarEdicion4" value="confirmar" class="formulario-boton boton">
         </form>
     </div>

@@ -196,6 +196,7 @@ window.addEventListener('load', function(){
   let boton13;
   let controlador14;
   let div14;
+  let div15;
 
 
 /* ---------------------------------- INICIO - (submit) Seleccionar 1 */
@@ -364,7 +365,7 @@ if (selectFacturacion) {
   }
   /* ---------------------------------- FIN - (submit) Insertar 3 */
 
-   /* ---------------------------------- INICIO - (submit) Insertar 4 */
+   /* ---------------------------------- INICIO - (submit) Insertar y consultar 4 */
   // Paso 1: Obtener referencias:
   const formInsercion4 = document.getElementById("formularioAgregar4");
   // Paso 2 - Asociación del elemento al evento (submit) y llamada a la función
@@ -378,9 +379,10 @@ if (selectFacturacion) {
     formInsercion4.addEventListener("submit", function(event){
       event.preventDefault();
       insertarDatos1(formInsercion4,boton10,controlador11,div11);
+      seleccionarDatos5(formInsercion4,boton10,controlador11,div11);
     });
   }
-  /* ---------------------------------- FIN - (submit) Insertar 4 */
+  /* ---------------------------------- FIN - (submit) Insertar y consultar 4 */
 
   /* ---------------------------------- INICIO - (submit) Insertar 5 */
   // Paso 1: Obtener referencias:

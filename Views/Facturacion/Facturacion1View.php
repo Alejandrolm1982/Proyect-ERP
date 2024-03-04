@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +7,7 @@
     <title>Facturacion</title>
 </head>
 <body>
+    
 <!--Menu desplegable-->
 <label for="btn-menu" class="menuEstetica">Menu</label>
 
@@ -34,6 +36,10 @@
 <div id="container2" style="display: none;">
 <!-- FORMULARIO DE AÑADIR -->
 <form id="formularioAgregar4" class="formulario">
+    <input type="hidden" id="id_usuario" name="id_usuario" value="<?php session_start(); echo $_SESSION['id_usuario']; ?>">
+
+    <label for="nombre">Cliente/Proveedor:</label>
+    <input type="text" id="nombre" name="nombre" class="formulario-campo" placeholder="nombre" >
 
     <label for="tipoTransaccion">Tipo de Transacción:</label>
     <select id="tipoTransaccion" name="tipoTransaccion" class="select" >
@@ -44,11 +50,14 @@
     <label for="fecha">Fecha:</label>
     <input type="date" id="fecha" name="fecha" class="formulario-campo" placeholder="Fecha" >
 
-    <label for="factura">factura:</label>
-    <input type="text" id="factura" name="factura" class="formulario-campo" placeholder="factura" required>
+    <label for="num_pedido">Número pedido:</label>
+    <input type="text" id="num_pedido" name="num_pedido" class="formulario-campo" placeholder="" >
 
-    <label for="albaran">Albarán:</label>
-    <input type="text" id="albaran" name="albaran" class="formulario-campo" placeholder="albaran" required>
+    <label for="vencimiento">Vencimiento:</label>
+    <input type="date" id="date" name="vencimiento" class="formulario-campo" placeholder="vencimiento" >
+
+    <label for="nif">Nif:</label>
+    <input type="text" id="nif" name="nif" class="formulario-campo" placeholder="nif" >
 
     <input type="submit" id="confirmar4" name="confirmar4" value="confirmar" class="formulario-boton boton">
 </form>
