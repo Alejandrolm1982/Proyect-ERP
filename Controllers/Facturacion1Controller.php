@@ -1,5 +1,4 @@
 <?php
-  
 if (file_exists("../Db/Con1Db.php")) {
     // Llamada a la conexión
     require_once '../Db/Con1Db.php';
@@ -11,6 +10,7 @@ if (file_exists("../Db/Con1Db.php")) {
     // Llamada al modelo
     require_once 'Models/Facturacion1Model.php';
 }
+
 
 // Instancia del objeto
 $oData = new Datos;
@@ -55,7 +55,7 @@ if (!empty($sql)) {
         foreach ($data as $row) {
             echo "
                 <div class='bloque0'>
-                    <a class='bloque0' href='edicionEliminacionFacturacion.php?id_facturacion=$row->id_facturacion'> 
+                    <a class='bloque0' href='edicionEliminacionFacturacion.php?id_facturacion=$row->id_facturacion&id_documento=$row->id_documento'> 
                         <div class='bloque1'>$row->id_usuario</div>
                         <div class='bloque1'>$row->id_cliente_proveedor</div>
                         <div class='bloque1'>$row->tipoTransaccion</div>

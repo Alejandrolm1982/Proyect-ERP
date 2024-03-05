@@ -92,6 +92,20 @@ function ajaxPost3(form1, controlador1, div1)
 }
 /* FIN - ajaxPost3 - Devuelve el resultado a un DIV (POST) */
 
+function ajaxGet1(controlador1, div1) {
+  return new Promise((resolve, reject) => {
+      let ajax1 = new XMLHttpRequest();
+      ajax1.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+              document.getElementById(div1.id).innerHTML = this.responseText;
+              resolve(this.responseText);
+          }
+      };
+      ajax1.open("GET", controlador1, true);
+      ajax1.send();
+  });
+}
+
 
 
 function insertarDatos1(form1, boton1, controlador1, div1)
@@ -151,6 +165,22 @@ function seleccionarDatos5(form1, boton1, controlador1, div1)
     habilitarControl1(boton1);
     form1.reset();
 }
+
+function seleccionarDatos6(controlador1, div1)
+{
+  ajaxGet1(controlador1, div1);
+}
+
+/* ---------------------------------- INICIO - (cargar Pagina) Seleccionar 5 */
+// Paso 1 - Referencia del elemento que tiene asociado el evento
+document.addEventListener("DOMContentLoaded", function() {
+  // Paso 2 - Llamada a la función
+  const controlador18 = "Controllers/Facturacion7Controller.php";
+  const div18 = document.getElementById("containerDocumento");
+  // Llamada a la función para cargar la consulta al cargar la página
+  seleccionarDatos6(controlador18, div18);
+});
+/* ---------------------------------- FIN - (cargar Pagina) Seleccionar 5 */
 
 
 window.addEventListener('load', function(){

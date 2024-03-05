@@ -28,6 +28,9 @@
         <input type="hidden" id="textoEliminacion0" name="textoEliminacion0" required class="campo1" placeholder="Identificador" value="<?php echo $_GET['id_facturacion']; ?>">
         <input type="submit" id="botonEliminacion4" name="botonEliminacion4" value="Eliminar" class="boton">
     </form>
-    <div id="container3"></div>
+    <form id="formDocumento" class="bloque1">
+        <input type="hidden" id="id_documento" name="id_documento" required class="campo1" placeholder="Identificador" value="<?php session_start(); echo $_SESSION['id_documento'] = $_GET['id_documento']; ?>">
+    </form>
+    <div id="containerDocumento"></div>
 </body>
 </html>
